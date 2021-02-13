@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title>Recipe Binder</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <h1>recipe binder</h1>
+            </div>
+            <i class="fas fa-home"></i>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="title-button-container" id="recipe-title">
+                <div class="recipe-title">
+                    <input type="text" name="recipe-title" id="" value="Chicken Parmesan">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <button>
+                    Delete Recipe
+                    <i class="fas fa-minus-circle"></i>
+                </button>
+            </div>
+            <div class="recipe-container">
+               
+                <div class="recipe-container__col instructions">
+                    <div class="recipe-container__col-title">
+                        <h3>Instructions</h3>
+                        <button>
+                            Add New Step
+                            <i class="fas fa-plus-circle"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-card">
+                        
+                        <div class="recipe-card__step">
+                            <div class="wrapper">
+                                <div class="recipe-card__step-title">
+                                    <h3>
+                                        Step 
+                                        <span>1</span>
+                                    </h3>
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                                <textarea>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                                <button>
+                                    Remove Step
+                                    <i class="fas fa-minus-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="recipe-container__col ingredients">
+                    <div class="recipe-container__col-title">
+                        <h3>Ingredients</h3>
+                        <button>
+                            Add New Ingredient
+                            <i class="fas fa-plus-circle"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-card">
+                        
+                        <div class="recipe-card__ingredient">
+                            <div class="wrapper">
+                                <input type="text" name="olive oil" value="Olive Oil">
+                                <div class="ingredient-buttons">
+                                    <button>
+                                        Remove Step
+                                        <i class="fas fa-minus-circle"></i>
+                                    </button>
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card__ingredient">
+                            <div class="wrapper">
+                                <input type="text" name="olive oil" value="Parmesan Cheese">
+                                <div class="ingredient-buttons">
+                                    <button>
+                                        Remove Step
+                                        <i class="fas fa-minus-circle"></i>
+                                    </button>
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe-card__ingredient">
+                            <div class="wrapper">
+                                <input type="text" name="olive oil" value="Flour">
+                                <div class="ingredient-buttons">
+                                    <button>
+                                        Remove Step
+                                        <i class="fas fa-minus-circle"></i>
+                                    </button>
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="recipe-container__col">
+                    <div class="recipe-card">
+                        <div class="recipe-card__main">
+                            <div class="wrapper">
+                                <div class="recipe-card__text-content">
+                                    <label for="cuisine">Cuisine<label>
+                                    <input type="text" name="cuisine" value="Italian">
+                                </div>
+                                <i class="fas fa-edit"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <div class="recipe-card__main">
+                            <div class="wrapper">
+                                <div class="recipe-card__text-content">
+                                    <label for="serving-size">Serving Size<label>
+                                    <input type="number" name="serving-size" value="4">
+                                </div>
+                                <i class="fas fa-edit"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <div class="recipe-card__main">
+                            <div class="wrapper">
+                                <div class="recipe-card__text-content">
+                                    <label for="cooking-time">Cooking Time<label>
+                                    <div class="hours-container">
+                                        <input type="number" name="cooking-time-hours" value="0">
+                                        <label for="cooking-time-hours">Hours</label>
+                                    </div>
+                                    <div class="minutes-container">
+                                        <input type="number" name="cooking-time-minutes" value="0">
+                                        <label for="cooking-time-minutes">Minutes</label>
+                                    </div>
+                                </div>
+                                <i class="fas fa-edit"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <div class="recipe-card__main">
+                            <div class="wrapper">
+                                <div class="recipe-card__text-content">
+                                    <label for="cooking-time">Last Updated<label>
+                                    <p id="last-updated">20 Minutes Ago</p>    
+                                </div>
+                                <i class="fas fa-edit"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </main>
+    <!-- <script src="./scripts/bundle.js"></script> -->
+</body>
+</html>
