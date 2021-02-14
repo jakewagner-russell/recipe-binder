@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/eae5rvv.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Recipe Binder</title>
 </head>
 <body>
-    <header>
-        <div class="wrapper">
-            <div class="logo">
-                <i class="fas fa-utensils"></i>
-                <h1>recipe binder</h1>
+    <header class="header">
+        <div class="header__wrapper wrapper">
+            <div class="header__logo">
+                <i class="fas fa-utensils header__utensils"></i>
+                <h1 class='header__title'>recipe binder</h1>
             </div>
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search header__search-icon"></i>
         </div>
     </header>
     <!-- <div class="sidebar-filter-menu">
@@ -49,118 +51,118 @@
             </div>
         </div>
     </div> -->
-    <main>
-        <div class="wrapper">
-            <div class="title-button-container">
-                <h2>your recipes</h2>
-                <button>
+    <main class="main">
+        <div class="main__wrapper wrapper">
+            <div class="main__title-button-container">
+                <h2 class='main__title'>your recipes</h2>
+                <button class='main__add-button add-button'>
                     Add New Recipe
-                    <i class="fas fa-plus-circle"></i>
+                    <i class="fas fa-plus-circle main__add-circle-icon add-circle-icon"></i>
                 </button>
             </div>
-            <div class="recipe-container">
-                <div class="recipe-container__col">
-                    <div class="recipe-card">
-                        <div class="recipe-card__main">
-                            <div class="wrapper">
-                                <div class="recipe-card__text-content">
+            <div class="main__recipe-container">
+                <div class="main__recipe-container-col">
+                    <div class="main__recipe-card">
+                        <div class="main__recipe-card-main-section">
+                            <div class="main__recipe-card-main-section__wrapper wrapper">
+                                <div class="main__recipe-card__text-content">
                                     <h3>Chicken Parmesan</h3>
                                     <p>Italian</p>
                                     <p>Quick</p>
                                 </div>
-                                <i class="fas fa-caret-down"></i>
+                                <i class="fas fa-caret-down main__recipe-card-down-arrow-icon"></i>
                             </div>
                         </div>
                         <div class="recipe-card__drop-down">
                             <div class="wrapper">
-                                <div class="recipe-card__drop-down__text-content">
+                                <div class="recipe-card__drop-down-text-content">
                                     <p>
-                                        <span class="recipe-card__drop-down__text-content__number">3</span> 
+                                        <span class="recipe-card__drop-down-number">3</span> 
                                         Ingredients
                                     </p>
                                     <p>
-                                        <span class="recipe-card__drop-down__text-content__number">4</span> 
+                                        <span class="recipe-card__drop-down-number">4</span> 
                                         Servings
                                     </p>
                                     <p>
-                                        <span class="recipe-card__drop-down__text-content__number">30</span> 
+                                        <span class="recipe-card__drop-down-number">30</span> 
                                         Minutes
                                     </p>
                                 </div>
-                                <button class="recipe-card__drop-down__button">
-                                    <i class="fas fa-utensil-spoon"></i>
+                                <button class="recipe-card__drop-down-button">
+                                    <i class="fas fa-utensil-spoon recipe-card__drop-down-spoon"></i>
                                     See Full Recipe 
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="recipe-container__col">
-                    <div class="recipe-card">
-                        <div class="recipe-card__main">
-                            <div class="wrapper">
-                                <div class="recipe-card__text-content">
+                <div class="main__recipe-container-col">
+                    <div class="main__recipe-card">
+                        <div class="main__recipe-card-main-section">
+                            <div class="main__recipe-card-main-section__wrapper wrapper">
+                                <div class="main__recipe-card__text-content">
                                     <h3>Chicken Parmesan</h3>
                                     <p>Italian</p>
                                     <p>Quick</p>
                                 </div>
-                                <i class="fas fa-caret-down"></i>
+                                <i class="fas fa-caret-down main__recipe-card-down-arrow-icon"></i>
                             </div>
                         </div>
                         <div class="recipe-card__drop-down">
                             <div class="wrapper">
-                                <div class="recipe-card__drop-down__text-content">
+                                <div class="recipe-card__drop-down-text-content">
                                     <p>
-                                        <span class="recipe-card__drop-down__text-content__number">3</span> 
+                                        <span class="recipe-card__drop-down-number">3</span> 
                                         Ingredients
                                     </p>
                                     <p>
-                                        <span class="recipe-card__drop-down__text-content__number">4</span> 
+                                        <span class="recipe-card__drop-down-number">4</span> 
                                         Servings
                                     </p>
                                     <p>
-                                        <span class="recipe-card__drop-down__text-content__number">30</span> 
+                                        <span class="recipe-card__drop-down-number">30</span> 
                                         Minutes
                                     </p>
                                 </div>
-                                <button class="recipe-card__drop-down__button">
-                                    <i class="fas fa-utensil-spoon"></i>
+                                <button class="recipe-card__drop-down-button">
+                                    <i class="fas fa-utensil-spoon recipe-card__drop-down-spoon"></i>
                                     See Full Recipe 
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="recipe-container__col">
-                    <div class="recipe-card">
-                        <div class="recipe-card__main">
-                            <div class="wrapper">
-                                <div class="recipe-card__text-content">
+                <div class="main__recipe-container-col">
+                    <div class="main__recipe-card">
+                        <div class="main__recipe-card-main-section">
+                            <div class="main__recipe-card-main-section__wrapper wrapper">
+                                <div class="main__recipe-card__text-content">
                                     <h3>Chicken Parmesan</h3>
                                     <p>Italian</p>
                                     <p>Quick</p>
                                 </div>
-                                <i class="fas fa-caret-down"></i>
+                                <i class="fas fa-caret-down main__recipe-card-down-arrow-icon"></i>
                             </div>
                         </div>
                         <div class="recipe-card__drop-down">
                             <div class="wrapper">
-                                <div class="recipe-card__drop-down__text-content">
+                                <div class="recipe-card__drop-down-text-content">
                                     <p>
-                                        <span class="recipe-card__drop-down__text-content__number">3</span> 
+                                        <span class="recipe-card__drop-down-number">3</span> 
                                         Ingredients
                                     </p>
                                     <p>
-                                        <span class="recipe-card__drop-down__text-content__number">4</span> 
+                                        <span class="recipe-card__drop-down-number">4</span> 
                                         Servings
                                     </p>
                                     <p>
-                                        <span class="recipe-card__drop-down__text-content__number">30</span> 
+                                        <span class="recipe-card__drop-down-number">30</span> 
                                         Minutes
                                     </p>
                                 </div>
-                                <button class="recipe-card__drop-down__button">
-                                    <i class="fas fa-utensil-spoon"></i>
+                                <button class="recipe-card__drop-down-button">
+                                    <i class="fas fa-utensil-spoon recipe-card__drop-down-spoon"></i>
                                     See Full Recipe 
                                 </button>
                             </div>
@@ -168,8 +170,8 @@
                     </div>
                 </div>
                 
-                <!-- <div class="recipe-container__message-container">
-                    <svg id="undraw_cooking_lyxy" xmlns="http://www.w3.org/2000/svg" width="345.25" height="358" viewBox="0 0 345.25 358">
+                <div class="main__message-container">
+                    <svg class="main__message-container-illustration" id="undraw_cooking_lyxy" xmlns="http://www.w3.org/2000/svg" width="345.25" height="358" viewBox="0 0 345.25 358">
                         <rect id="Rectangle_25" data-name="Rectangle 25" width="15.65" height="248.504" transform="matrix(0.836, -0.548, 0.548, 0.836, 65.295, 133.755)" fill="#e6e6e6"/>
                         <path id="Path_4" data-name="Path 4" d="M289.32,168.74,319.6,214.9a4.031,4.031,0,0,1-6.741,4.422l-34.808-53.071a28.752,28.752,0,0,0-13.824,2.27l37.925,57.823a4.031,4.031,0,0,1-6.742,4.422l-37.925-57.824a28.752,28.752,0,0,0-7.59,11.775L284.7,237.792a4.031,4.031,0,1,1-6.742,4.422L247.681,196.05C246.9,208.921,251.1,224.178,260.3,238.2c17.094,26.063,44.977,37.991,62.279,26.643s17.471-41.675.377-67.738C313.757,183.083,301.436,173.155,289.32,168.74Z" transform="translate(-242.094 -121.767)" fill="#e6e6e6"/>
                         <rect id="Rectangle_26" data-name="Rectangle 26" width="15.65" height="248.504" transform="translate(121.407 96.746)" fill="#e6e6e6"/>
@@ -215,13 +217,11 @@
                         <ellipse id="Ellipse_19" data-name="Ellipse 19" cx="0.95" cy="0.475" rx="0.95" ry="0.475" transform="translate(311.905 291.672)" fill="#e6e6e6"/>
                         <ellipse id="Ellipse_20" data-name="Ellipse 20" cx="0.95" cy="0.475" rx="0.95" ry="0.475" transform="translate(314.148 293.354)" fill="#e6e6e6"/>
                     </svg>
-                    <div class="recipe-container__message-container_text-content">
+                    <div class="main__message-container-text-content">
                         <h1>Sorry!</h1>
                         <h4>No recipes found.</h4>
                     </div>
-                </div> -->
-                
-                  
+                </div>  
             </div>
         </div>       
     </main>
