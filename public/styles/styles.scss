@@ -1,0 +1,587 @@
+//Variables
+$font: proxima-nova, sans-serif;
+$font-regular: 400;
+$font-bold: 700;
+$font-extra-bold: 800;
+$font-size-x-large: 5rem;
+$font-size-large: 3.5rem;
+$font-size-medium: 2rem;
+$font-size-small: 1.4rem;
+
+$primary-clr: #2C3E50;
+$secondary-clr: #F1C40F;
+$warning-clr: #E74C3C;
+$body-bg-clr: radial-gradient(circle, rgba(241,196,15,1) 0%, rgba(255,208,52,1) 100%);
+
+$primary-light-bg: #fff;
+$primary-light-text: $primary-clr;
+$primary-dark-bg: $primary-clr;
+$primary-dark-text: #fff;
+
+//Extenders
+%flexbox-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexbox-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+%transition {
+    transition: .5s;
+}
+
+%box-shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+%border-radius {
+    border-radius: 1rem;
+}
+
+//Mixins
+@mixin primary-theme-colors($light-theme: true) {
+    @if $light-theme {
+        color: $primary-light-text;
+        background: $primary-light-bg;
+    } @else {
+        color: $primary-dark-text;
+        background: $primary-dark-bg;
+    }
+}
+
+//Global Styles
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font;
+    background: $body-bg-clr;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+
+    &::before {
+        content: '';
+        background: url(https://source.unsplash.com/collection/345760/1600x900) no-repeat center;
+        background-size: cover;
+        filter: grayscale(100%);
+        mix-blend-mode: overlay;
+        position: absolute;
+        top:0;
+        left:0;
+        opacity: .4;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+button {
+    @extend %flexbox-row;
+    border: none;
+    transition: .3s;
+
+    &:hover {
+        cursor: pointer;
+        transition: .3s;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+input, button {
+    @extend %border-radius;
+}
+
+// Header styles
+
+.header {
+
+    width: 100%;
+    padding: 8rem 0;
+    color: $primary-clr;
+
+    //Header nested styles
+
+    &__wrapper {
+        justify-content: space-between;
+    }
+
+    &__logo-container {        
+        justify-content: flex-start;   
+    }
+
+    &__search-icon {    
+        @extend %transition;
+        font-size: $font-size-medium;
+
+        &:hover {
+            @extend %transition;
+            cursor: pointer;
+            color: #fff;
+        }
+    }
+
+    &__wrapper, 
+    &__logo-container, 
+    &__search-icon {
+        @extend %flexbox-row;
+    }
+
+    &__utensils-icon {
+        margin-right: 2.4rem;
+    }
+
+    &__utensils-icon, 
+    &__logo-title {
+        font-size: $font-size-x-large;
+    }
+
+}
+
+// Filter sidebar menu styles
+
+.sidebar-filter-menu {
+    @extend %flexbox-column-center, %transition;
+    @include primary-theme-colors($light-theme: false);
+
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40vw;
+    max-width: 80rem;
+    height: 100vh;
+    padding: 8rem 0;
+    overflow-y: auto;
+
+    &__wrapper {
+        position: relative;
+        padding-top: 6.4rem;
+    }
+
+    &__close-btn {
+        font-size: $font-size-large;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &:hover {
+            @extend %transition;
+            color: $secondary-clr;
+            cursor: pointer;
+            transform: rotate(90deg);
+        }
+    }
+
+    &__filter-recipe {
+        
+        &-label {
+            display: block;
+            margin-bottom: 1.2rem;
+        }
+
+        &-input {
+            @include primary-theme-colors($light-theme: false);
+
+            filter: brightness(1.25);
+            width: 100%;
+            font-size: $font-size-small;
+            padding: $font-size-medium;
+            border: none;
+        }
+    
+    }
+
+    &__filter-recipe-label, 
+    &__filter-type, 
+    &__sort-by-section-title {
+        font-size: $font-size-large;
+        font-weight: $font-bold;
+        width: 100%;
+    }
+
+    &__sort-by-section {
+        @extend %flexbox-row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &-title {
+            margin: 6.4rem 0 1rem;
+        }
+    }
+
+    &__filter-type-col, 
+    &__filter-options-col {
+
+        @extend %flexbox-column-center;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 45%;
+        height: 100%;
+    }
+
+
+    &__filter-type, 
+    &__filter-options-col {
+        margin: 1rem 0;
+    }
+
+    &__filter-options { 
+        &-col {
+            @include primary-theme-colors($light-theme: true);
+            @extend %border-radius;
+            padding: 3rem 0;
+            max-height: 50vh;
+
+            &-wrapper {
+                max-height: 80%;
+                overflow-y: scroll;
+                &::-webkit-scrollbar {
+                    
+                    background: none;
+                    
+                    &-thumb {
+                        background: $primary-clr;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+        }
+
+        &-container {
+            @extend %flexbox-row;
+            position: relative;
+            margin: 2.4rem 0;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &-checkbox-container {
+            @extend %transition;
+
+            height: 2rem;
+            padding-left: 3.5rem;
+            margin-bottom: 0;
+            cursor: pointer;
+            font-size: $font-size-medium;
+            user-select: none;
+
+            &:hover input ~ .sidebar-filter-menu__filter-options-checkmark{
+                @extend %transition;
+                background-color: $secondary-clr;
+            }
+
+            & input:checked ~ .sidebar-filter-menu__filter-options-checkmark {
+                @extend %transition;
+                background-color: $secondary-clr;
+
+                &::after {
+                    display: block;
+                }
+            }
+
+        }
+
+        &-checkbox {
+            @extend %transition;
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        &-checkmark {
+            @extend %transition;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 2rem;
+            width: 2rem;
+            background-color: $primary-clr;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: none;
+                left: .65rem;
+                top: .2rem;
+                width: .5rem;
+                height: 1rem;
+                border: solid $primary-clr;
+                border-width: 0 .3rem .3rem 0;
+                transform: rotate(45deg);
+            }
+        }
+
+        &-label {
+            font-weight: $font-bold;
+            font-size: $font-size-small;
+        }
+    }
+
+    &__filter-type {
+        @extend %flexbox-row, %transition;
+        justify-content: space-between;
+
+        &-right-arrow {
+            @extend %transition;
+            opacity: 0;
+            transform: translateX(-3rem);
+        }
+
+
+        &-right-arrow, &:hover, &.clicked {
+            color: $secondary-clr;
+            cursor: pointer;
+        }
+
+        &:hover &-right-arrow {
+            @extend %transition;
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    
+}
+
+//Main styles
+
+.main {
+    @extend %flexbox-column-center;
+
+    //Main nested styles
+
+    &__title-button-container {
+        @extend %flexbox-row;
+        justify-content: space-between;
+    }
+
+    &__title {
+        color: $primary-clr;
+        font-size: $font-size-large;
+    }
+
+    &__add-button {
+        @include primary-theme-colors($light-theme: true);
+        font-size: $font-size-medium;
+        font-weight: $font-bold;
+        padding: 1.6rem;
+
+        &:hover {
+            @include primary-theme-colors($light-theme: false); 
+        }
+    }
+
+    &__add-circle-icon {
+        padding-left: .5em;
+    }
+
+    &__recipe-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        grid-template-rows: repeat(auto-fit, 10rem);
+        //padding-right: 1rem;
+    }
+
+    &__recipe-card {
+        width: 100%;
+        
+        &.open {
+            @extend %transition;
+            grid-row: auto / span 2;
+
+            .main__recipe-card {
+
+                &-main-section {
+                    @extend %box-shadow, %transition;
+                    border-radius: 1rem 1rem 0 0;
+                    height: 50%;
+                }
+
+                &-drop-down {
+                    @extend %transition;
+                    transform: translateY(-50%);
+                    padding: 2.4rem 0;
+                    height: 100%;
+                    opacity: 1;
+
+                    * {
+                        opacity: 1;
+                        height: auto;
+                    }
+                }
+
+                &-down-arrow-icon {
+                    transform: rotate(180deg);
+                }
+            }
+            
+        }
+
+        &-main-section__wrapper, &-drop-down__wrapper {
+            @extend %flexbox-row;
+            justify-content: space-between;
+            width: 90%;
+            height: 100%;
+        }
+
+        &-main-section {
+            @include primary-theme-colors($light-theme: false);
+            @extend %transition;
+
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+            overflow: hidden;
+
+            &:hover {
+                @include primary-theme-colors($light-theme: true);
+                cursor: pointer;
+            }
+            
+        }
+
+        &-down-arrow-icon {
+            @extend %transition;
+            font-size: $font-size-large;           
+        }
+
+        &-drop-down {
+            @extend %transition;
+
+            width: 100%;
+            height: 0;
+            top: 100%;
+            z-index: 1;
+            display: flex;
+            align-items: flex-end;
+            border-radius: 1rem;
+            transform: translateY(-100%);
+            opacity: 0;
+
+            * {
+                opacity: 0;
+            }
+            
+            @include primary-theme-colors($light-theme: true);
+
+            &__text-content {
+                width: 45%;
+            }
+
+            &__ingredient-amount,
+            &__serving-amount,
+            &__cooking-time {
+                font-size: $font-size-small;
+                margin: .6rem;
+            }
+
+            &__ingredients-number, 
+            &__servings-number, 
+            &__cooking-time-number {
+                font-weight: 700;
+            }
+
+            &__button {
+                @include primary-theme-colors($light-theme: false);
+                font-size: $font-size-small;
+                font-weight: $font-bold;
+                padding: 1.6rem 1rem;
+
+                &:hover {
+                    @include primary-theme-colors($light-theme: true);
+                    background: $secondary-clr;
+                }
+            }
+
+            &__spoon {
+                margin-right: .6rem
+            }
+
+            &.open {
+                
+            }
+        }
+
+        &-main-section {
+            padding: 2.4rem 0;
+        }
+
+    }
+
+    &__recipe-title {
+        font-size: $font-size-medium;
+        margin: 0 0 .5rem 0;
+    }
+
+    &__recipe-description {
+        font-size: $font-size-small;
+        margin: 0;
+    }
+
+    &__message-container {
+        @extend %flexbox-row;
+        width: 100%;
+        height: 50rem;
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+
+        &-illustration {
+            width: 50%;
+            height: 100%;
+        }
+
+        &-text-content {
+            @extend %flexbox-column-center;
+            align-items: flex-start;
+            width: 50%;
+            height: 100%;
+            color: $primary-clr;
+
+            &-title {
+                font-size: $font-size-x-large;
+                margin-bottom: 0;
+            }
+
+            &-subtitle {
+                margin-top: 1rem;
+                font-size: $font-size-large;
+            }
+        }
+
+
+    }
+
+}
