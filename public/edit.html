@@ -10,160 +10,174 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>Recipe Binder</title>
 </head>
-<body class='edit'>
+<body class='edit-page'>
     <header class="header">
         <div class="header__wrapper wrapper">
-            <div class="header__logo">
-                <i class="fas fa-utensils header__utensils"></i>
-                <h1 class='header__title'>recipe binder</h1>
+            <div class="header__logo-container">
+                <i class="fas fa-utensils header__utensils-icon"></i>
+                <h1 class='header__logo-title'>recipe binder</h1>
             </div>
             <i class="fas fa-home header__home-icon"></i>
         </div>
     </header>
     <main class="main">
+        
         <div class="main__wrapper wrapper">
             <div class="main__title-button-container" id="recipe-title">
-                <div class="main__recipe-title">
-                    <input class="main__recipe-title-input" type="text" name="recipe-title" id="" value="Chicken Parmesan">
-                    <i class="fas fa-edit main__recipe-title-edit"></i>
+                <div class="main__recipe-title display-mode">
+                    <span class="main__recipe-title-input" role="textbox" 
+                    contenteditable>Chicken Parmesan</span>
+                    <i class="fas fa-edit main__recipe-title-edit-icon"></i>
                 </div>
                 <button class="main__delete-button">
                     Delete Recipe
                     <i class="fas fa-minus-circle main__minus-icon"></i>
                 </button>
             </div>
+
+            <div class="main__column-title-container">
+                <div class="main__instructions-title-container">
+                    <h3 class="main__instructions-title">Instructions</h3>
+                    <button class="main__add-new-button">
+                        Add New Step
+                        <i class="fas fa-plus-circle main__plus-icon"></i>
+                    </button>
+                </div>
+                <div class="main__ingredients-title-container">
+                    <h3 class="main__ingredients-title">Ingredients</h3>
+                    <button class="main__add-new-button">
+                        Add New Ingredient
+                        <i class="fas fa-plus-circle main__plus-icon"></i>
+                    </button>
+                </div>
+            </div>
+
             <div class="main__recipe-container">
-               
-                <div class="main__recipe-container-col">
-                    <div class="main__instructions-title-container">
-                        <h3 class="main__instructions-title">Instructions</h3>
-                        <button class="main__add-new-button">
-                            Add New Step
-                            <i class="fas fa-plus-circle main__plus-icon"></i>
-                        </button>
-                    </div>
-                    <div class="main__step-container">
-                        
-                        <div class="main__step">
+                <div class="main__recipe-container-col"> 
+                        <div class="main__step-container display-mode">
                             <div class="main__step-wrapper wrapper">
                                 <div class="main__step-title-container">
                                     <h3 class="main__step-title">
                                         Step 
                                         <span class="main__step-title-number">1</span>
                                     </h3>
-                                    <i class="fas fa-edit main__edit-icon"></i>
+                                    <i class="fas fa-edit main__step-edit-icon"></i>
                                 </div>
-                                <textarea class="main__step-text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
-                                <button class="main__remove-button">
-                                    Remove Step
+                                <span class="main__step-text-content" contenteditable>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                                <button class="main__step-remove-button">
+                                    Remove
                                     <i class="fas fa-minus-circle main__minus-icon"></i>
                                 </button>
                             </div>
                         </div>
-
-                    </div>
                 </div>
                 
                 <div class="main__recipe-container-col">
-                    <div class="main__ingredients-title-container">
-                        <h3 class="main__ingredients-title">Ingredients</h3>
-                        <button class="main__add-new-button">
-                            Add New Ingredient
-                            <i class="fas fa-plus-circle main__plus-icon"></i>
-                        </button>
-                    </div>
-                    <div class="recipe-card">
-                        
-                        <div class="recipe-card__ingredient">
-                            <div class="wrapper">
-                                <input type="text" name="olive oil" value="Olive Oil">
-                                <div class="ingredient-buttons">
-                                    <button>
-                                        Remove Step
-                                        <i class="fas fa-minus-circle"></i>
+                       
+                        <div class="main__ingredient-container display-mode">
+                            <div class="main__ingredient-wrapper wrapper">
+                                <span class="main__ingredient-type" contenteditable>Olive Oil</span>
+                                <div class="main__ingredient-button-container">
+                                    <button class="main__ingredient-remove-button">
+                                        Remove
+                                        <i class="fas fa-minus-circle main__ingredient-remove-button-minus-icon"></i>
                                     </button>
-                                    <i class="fas fa-edit"></i>
+                                    <i class="fas fa-edit main__ingredient-edit-icon"></i>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="recipe-card__ingredient">
-                            <div class="wrapper">
-                                <input type="text" name="olive oil" value="Parmesan Cheese">
-                                <div class="ingredient-buttons">
-                                    <button>
-                                        Remove Step
-                                        <i class="fas fa-minus-circle"></i>
+                        <div class="main__ingredient-container display-mode">
+                            <div class="main__ingredient-wrapper wrapper">
+                                <span class="main__ingredient-type" contenteditable>Olive Oil</span>
+                                <div class="main__ingredient-button-container">
+                                    <button class="main__ingredient-remove-button">
+                                        Remove
+                                        <i class="fas fa-minus-circle main__ingredient-remove-button-minus-icon"></i>
                                     </button>
-                                    <i class="fas fa-edit"></i>
+                                    <i class="fas fa-edit main__ingredient-edit-icon"></i>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="recipe-card__ingredient">
-                            <div class="wrapper">
-                                <input type="text" name="olive oil" value="Flour">
-                                <div class="ingredient-buttons">
-                                    <button>
-                                        Remove Step
-                                        <i class="fas fa-minus-circle"></i>
+                        <div class="main__ingredient-container display-mode">
+                            <div class="main__ingredient-wrapper wrapper">
+                                <span class="main__ingredient-type" contenteditable>Olive Oil</span>
+                                <div class="main__ingredient-button-container">
+                                    <button class="main__ingredient-remove-button">
+                                        Remove
+                                        <i class="fas fa-minus-circle main__ingredient-remove-button-minus-icon"></i>
                                     </button>
-                                    <i class="fas fa-edit"></i>
+                                    <i class="fas fa-edit main__ingredient-edit-icon"></i>
                                 </div>
                             </div>
                         </div>
 
-                    </div>
+                        <div class="main__ingredient-container display-mode">
+                            <div class="main__ingredient-wrapper wrapper">
+                                <span class="main__ingredient-type" contenteditable>Olive Oil</span>
+                                <div class="main__ingredient-button-container">
+                                    <button class="main__ingredient-remove-button">
+                                        Remove
+                                        <i class="fas fa-minus-circle main__ingredient-remove-button-minus-icon"></i>
+                                    </button>
+                                    <i class="fas fa-edit main__ingredient-edit-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+
+
                 </div>
                 
                 <div class="main__recipe-container-col">
-                    <div class="main__recipe-card">
-                        <div class="main__recipe-card-wrapper wrapper">
-                            <div class="main__recipe-card-text-content">
-                                <label class="main__cuisine-title" for="cuisine">Cuisine<label>
-                                <input class="main__cuisine-type" type="text" name="cuisine" value="Italian">
+                    <div class="main__recipe-detail-container display-mode">
+                        <div class="main__recipe-detail-wrapper wrapper">
+                            <div class="main__recipe-detail-text-content">
+                                <label class="main__recipe-detail-cuisine-title" for="cuisine">Cuisine</label>
+                                <span class="main__recipe-detail-cuisine-type" contenteditable>Italian</span>
                             </div>
-                            <i class="fas fa-edit main__edit-icon"></i>
+                            <i class="fas fa-edit main__recipe-detail-edit-icon"></i>
                         </div>
                     </div>
-                    <div class="main__recipe-card">
-                        <div class="main__recipe-card-wrapper wrapper">
-                                <div class="main__recipe-card-text-content">
-                                    <label class="main__serving-size-title"for="serving-size">Serving Size<label>
-                                    <input class="main__serving-size-number"type="number" name="serving-size" value="4">
+                    <div class="main__recipe-detail-container display-mode">
+                        <div class="main__recipe-detail-wrapper wrapper">
+                                <div class="main__recipe-detail-text-content">
+                                    <label class="main__recipe-detail-serving-size-title"for="serving-size">Serving Size</label>
+                                    <input class="main__recipe-detail-serving-size-number" type="number" name="serving-size" value="0" min="0" max="9999">
                                 </div>
-                                <i class="fas fa-edit main__edit-icon"></i>
+                                <i class="fas fa-edit main__recipe-detail-edit-icon"></i>
                         </div>
                     </div>
-                    <div class="main__recipe-card">
-                        <div class="main__recipe-card-wrapper wrapper">
-                            <div class="main__recipe-card-text-content">
-                                <label class="main__cooking-time-title" for="cooking-time">Cooking Time<label>
-                                <div class="main__hours-container">
-                                    <input class="main__cooking-time-hour-number" type="number" name="cooking-time-hours" value="0">
-                                    <label class="main__cooking-time-hour-label" for="cooking-time-hours">Hours</label>
-                                </div>
-                                <div class="main__minutes-container">
-                                    <input class="main__cooking-time-minute-number" type="number" name="cooking-time-minutes" value="0">
-                                    <label class="main__cooking-time-minute-label" for="cooking-time-minutes">Minutes</label>
+                    <div class="main__recipe-detail-container display-mode">
+                        <div class="main__recipe-detail-wrapper wrapper">
+                            <div class="main__recipe-detail-text-content">
+                                <label class="main__recipe-detail-cooking-time-title" for="cooking-time">Cooking Time</label>
+                                <div class="main__recipe-detail-cooking-time-container">
+                                    <div class="main__recipe-detail-cooking-time-hours-container">
+                                        <!-- Make sure to add a js function that changes the width of the number input based on character length -->
+                                        <input class="main__recipe-detail-cooking-time-hours-number" type="number" name="cooking-time-hours" value="0" min="0" max="99">
+                                        <label class="main__recipe-detail-cooking-time-hours-label" for="cooking-time-hours">Hours</label>
+                                    </div>
+                                    <div class="main__recipe-detail-cooking-time-minutes-container">
+                                        <input class="main__recipe-detail-cooking-time-minutes-number" type="number" name="cooking-time-minutes" value="0" min="0" max="99">
+                                        <label class="main__recipe-detail-cooking-time-minutes-label" for="cooking-time-minutes">Minutes</label>
+                                    </div>
                                 </div>
                             </div>
-                            <i class="fas fa-edit main__edit-icon"></i>
+                            <i class="fas fa-edit main__recipe-detail-edit-icon"></i>
                         </div>
                     </div>
-                    <div class="main__recipe-card">
-                            <div class="main__recipe-card-wrapper wrapper">
-                                <div class="main__recipe-card-text-content">
-                                    <label class="main__last-updated-title" for="cooking-time">Last Updated<label>
-                                    <p class="main__last-updated-number"id="last-updated">20 Minutes Ago</p>    
+                    <div class="main__recipe-detail-container">
+                            <div class="main__recipe-detail-wrapper wrapper">
+                                <div class="main__recipe-detail-text-content">
+                                    <label class="main__recipe-detail-last-updated-title" for="cooking-time">Last Updated</label>
+                                    <p class="main__recipe-detail-last-updated-number"id="last-updated">20 Minutes Ago</p>    
                                 </div>
-                                <i class="fas fa-edit main__edit-icon"></i>
                             </div>
                         </div>
                 </div>
             </div>
         </div>       
     </main>
-    <!-- <script src="./scripts/bundle.js"></script> -->
 </body>
 </html>
