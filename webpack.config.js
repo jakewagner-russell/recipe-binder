@@ -7,7 +7,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'public/scripts'),
-        filename: 'bundle.js',
+        filename: '[name]-bundle.js',
         publicPath: '/'
     },
     module: {
@@ -20,7 +20,19 @@ module.exports = {
                     presets: ['@babel/preset-env']
                 }
             }
-        }]
+        },
+        {
+            test: /\.(png|jpg|gif)$/,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]'
+                }
+              }
+            ]
+          }
+        ]
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'public'),
