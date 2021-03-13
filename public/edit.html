@@ -1,183 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://use.typekit.net/eae5rvv.css">
-    <link rel="stylesheet" href="styles/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/eae5rvv.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <title>Recipe Binder</title>
-</head>
-<body class='edit-page'>
+  </head>
+  <body class="edit-page">
+    <!-- Start Header -->
     <header class="header">
-        <div class="header__wrapper wrapper">
-            <div class="header__logo-container">
-                <i class="fas fa-utensils header__utensils-icon"></i>
-                <h1 class='header__logo-title'>recipe binder</h1>
-            </div>
-            <i class="fas fa-home header__home-icon"></i>
+      <!-- Start Header Wrapper-->
+      <div class="header__wrapper wrapper">
+        <!-- Start Header Logo Container-->
+        <div class="header__logo-container">
+          <i class="fas fa-utensils header__utensils-icon"></i>
+          <h1 class="header__logo-title">recipe binder</h1>
         </div>
+        <!-- End Header Logo Container-->
+        <a class="header__home-link" href="/index.html">
+          <i class="fas fa-home header__home-icon"></i>
+        </a>
+      </div>
+      <!-- End Header Wrapper-->
     </header>
+    <!-- End Header -->
+    <!-- Start Main Section -->
     <main class="main">
-        
-        <div class="main__wrapper wrapper">
-            <div class="main__title-button-container" id="recipe-title">
-                <div class="main__recipe-title display-mode">
-                    <span class="main__recipe-title-input" role="textbox" 
-                    contenteditable>Chicken Parmesan</span>
-                    <i class="fas fa-edit main__recipe-title-edit-icon"></i>
-                </div>
-                <button class="main__delete-button">
-                    Delete Recipe
-                    <i class="fas fa-minus-circle main__minus-icon"></i>
-                </button>
+      <!-- Start Main Section Wrapper -->
+      <div class="main__wrapper wrapper">
+        <!-- Start Main Section Title Button Container -->
+        <div class="main__title-button-container" id="recipe-title">
+          <!-- Start Main Section Recipe Title Container -->
+          <div class="main__recipe-title-container display-mode">
+            <span
+              class="main__recipe-title-input"
+              role="textbox"
+              contenteditable="false"
+            ></span>
+            <i class="fas fa-edit main__recipe-title-edit-icon"></i>
+          </div>
+          <!-- End Main Section Recipe Title Container -->
+          <button class="main__delete-button">
+            Delete Recipe
+            <i class="fas fa-minus-circle main__minus-icon"></i>
+          </button>
+        </div>
+        <!-- End Main Section Title Button Container -->
+        <!-- Start Main Section Column Title Container -->
+        <div class="main__column-title-container"></div>
+        <!-- End Main Section Column Title Container -->
+        <!-- Start Main Section Recipe Container -->
+        <div class="main__recipe-container">
+          <!-- Start Main Section Recipe Container Column For Instructions-->
+          <div class="main__recipe-container-col">
+            <!-- Start Main Section Recipe Container Column For Instructions - Title Container-->
+            <div class="main__recipe-container-col__title-container">
+              <h3 class="main__instructions-title">Instructions</h3>
+              <button class="main__add-new-button" id="main__add-new-step">
+                Add New Step
+                <i class="fas fa-plus-circle main__plus-icon"></i>
+              </button>
             </div>
-
-            <div class="main__column-title-container">
-                <div class="main__instructions-title-container">
-                    <h3 class="main__instructions-title">Instructions</h3>
-                    <button class="main__add-new-button">
-                        Add New Step
-                        <i class="fas fa-plus-circle main__plus-icon"></i>
-                    </button>
-                </div>
-                <div class="main__ingredients-title-container">
-                    <h3 class="main__ingredients-title">Ingredients</h3>
-                    <button class="main__add-new-button">
-                        Add New Ingredient
-                        <i class="fas fa-plus-circle main__plus-icon"></i>
-                    </button>
-                </div>
+            <!-- End Main Section Recipe Container Column For Instructions - Title Container-->
+            <!-- Start Main Section Recipe Container Column For Instructions - Content Container-->
+            <div
+              class="main__recipe-container-col__content-container"
+              id="main__instructions-col"
+            ></div>
+            <!-- End Main Section Recipe Container Column For Instructions - Content Container-->
+          </div>
+          <!-- End Main Section Recipe Container Column For Instructions-->
+          <!-- Start Main Section Recipe Container Column For Ingredients-->
+          <div class="main__recipe-container-col">
+            <!-- Start Main Section Recipe Container Column For Ingredients - Title Container-->
+            <div class="main__recipe-container-col__title-container">
+              <h3 class="main__ingredients-title">Ingredients</h3>
+              <button
+                class="main__add-new-button"
+                id="main__add-new-ingredient"
+              >
+                Add New Ingredient
+                <i class="fas fa-plus-circle main__plus-icon"></i>
+              </button>
             </div>
-
-            <div class="main__recipe-container">
-                <div class="main__recipe-container-col"> 
-                        <div class="main__step-container display-mode">
-                            <div class="main__step-wrapper wrapper">
-                                <div class="main__step-title-container">
-                                    <h3 class="main__step-title">
-                                        Step 
-                                        <span class="main__step-title-number">1</span>
-                                    </h3>
-                                    <i class="fas fa-edit main__step-edit-icon"></i>
-                                </div>
-                                <span class="main__step-text-content" contenteditable>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                                <button class="main__step-remove-button">
-                                    Remove
-                                    <i class="fas fa-minus-circle main__minus-icon"></i>
-                                </button>
-                            </div>
-                        </div>
+            <!-- End Main Section Recipe Container Column For Ingredients - Title Container-->
+            <!-- Start Main Section Recipe Container Column For Ingredients - Content Container-->
+            <div
+              class="main__recipe-container-col__content-container"
+              id="main__ingredients-col"
+            ></div>
+            <!-- End Main Section Recipe Container Column For Ingredients - Content Container-->
+          </div>
+          <!-- End Main Section Recipe Container Column For Ingredients-->
+          <!-- Start Main Section Recipe Container Column For Recipe Attributes-->
+          <div class="main__recipe-container-col main__recipe-attributes-col">
+            <!-- Start Main Section Recipe Container Column For Recipe Attributes - Cuisine Type Container-->
+            <div
+              class="main__recipe-detail-container display-mode"
+              id="main__cuisine-container"
+            >
+              <!-- Start Main Section Recipe Container Column For Recipe Attributes - Wrapper-->
+              <div class="main__recipe-detail-wrapper wrapper">
+                <!-- Start Main Section Recipe Container Column For Recipe Attributes - Text Content-->
+                <div class="main__recipe-detail-text-content">
+                  <label class="main__recipe-detail-cuisine-title" for="cuisine"
+                    >Cuisine</label
+                  >
+                  <span
+                    class="main__recipe-detail-cuisine-type"
+                    contenteditable
+                  ></span>
                 </div>
-                
-                <div class="main__recipe-container-col">
-                       
-                        <div class="main__ingredient-container display-mode">
-                            <div class="main__ingredient-wrapper wrapper">
-                                <span class="main__ingredient-type" contenteditable>Olive Oil</span>
-                                <div class="main__ingredient-button-container">
-                                    <button class="main__ingredient-remove-button">
-                                        Remove
-                                        <i class="fas fa-minus-circle main__ingredient-remove-button-minus-icon"></i>
-                                    </button>
-                                    <i class="fas fa-edit main__ingredient-edit-icon"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="main__ingredient-container display-mode">
-                            <div class="main__ingredient-wrapper wrapper">
-                                <span class="main__ingredient-type" contenteditable>Olive Oil</span>
-                                <div class="main__ingredient-button-container">
-                                    <button class="main__ingredient-remove-button">
-                                        Remove
-                                        <i class="fas fa-minus-circle main__ingredient-remove-button-minus-icon"></i>
-                                    </button>
-                                    <i class="fas fa-edit main__ingredient-edit-icon"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="main__ingredient-container display-mode">
-                            <div class="main__ingredient-wrapper wrapper">
-                                <span class="main__ingredient-type" contenteditable>Olive Oil</span>
-                                <div class="main__ingredient-button-container">
-                                    <button class="main__ingredient-remove-button">
-                                        Remove
-                                        <i class="fas fa-minus-circle main__ingredient-remove-button-minus-icon"></i>
-                                    </button>
-                                    <i class="fas fa-edit main__ingredient-edit-icon"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="main__ingredient-container display-mode">
-                            <div class="main__ingredient-wrapper wrapper">
-                                <span class="main__ingredient-type" contenteditable>Olive Oil</span>
-                                <div class="main__ingredient-button-container">
-                                    <button class="main__ingredient-remove-button">
-                                        Remove
-                                        <i class="fas fa-minus-circle main__ingredient-remove-button-minus-icon"></i>
-                                    </button>
-                                    <i class="fas fa-edit main__ingredient-edit-icon"></i>
-                                </div>
-                            </div>
-                        </div>
-
-
-                </div>
-                
-                <div class="main__recipe-container-col">
-                    <div class="main__recipe-detail-container display-mode">
-                        <div class="main__recipe-detail-wrapper wrapper">
-                            <div class="main__recipe-detail-text-content">
-                                <label class="main__recipe-detail-cuisine-title" for="cuisine">Cuisine</label>
-                                <span class="main__recipe-detail-cuisine-type" contenteditable>Italian</span>
-                            </div>
-                            <i class="fas fa-edit main__recipe-detail-edit-icon"></i>
-                        </div>
-                    </div>
-                    <div class="main__recipe-detail-container display-mode">
-                        <div class="main__recipe-detail-wrapper wrapper">
-                                <div class="main__recipe-detail-text-content">
-                                    <label class="main__recipe-detail-serving-size-title"for="serving-size">Serving Size</label>
-                                    <input class="main__recipe-detail-serving-size-number" type="number" name="serving-size" value="0" min="0" max="9999">
-                                </div>
-                                <i class="fas fa-edit main__recipe-detail-edit-icon"></i>
-                        </div>
-                    </div>
-                    <div class="main__recipe-detail-container display-mode">
-                        <div class="main__recipe-detail-wrapper wrapper">
-                            <div class="main__recipe-detail-text-content">
-                                <label class="main__recipe-detail-cooking-time-title" for="cooking-time">Cooking Time</label>
-                                <div class="main__recipe-detail-cooking-time-container">
-                                    <div class="main__recipe-detail-cooking-time-hours-container">
-                                        <!-- Make sure to add a js function that changes the width of the number input based on character length -->
-                                        <input class="main__recipe-detail-cooking-time-hours-number" type="number" name="cooking-time-hours" value="0" min="0" max="99">
-                                        <label class="main__recipe-detail-cooking-time-hours-label" for="cooking-time-hours">Hours</label>
-                                    </div>
-                                    <div class="main__recipe-detail-cooking-time-minutes-container">
-                                        <input class="main__recipe-detail-cooking-time-minutes-number" type="number" name="cooking-time-minutes" value="0" min="0" max="99">
-                                        <label class="main__recipe-detail-cooking-time-minutes-label" for="cooking-time-minutes">Minutes</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <i class="fas fa-edit main__recipe-detail-edit-icon"></i>
-                        </div>
-                    </div>
-                    <div class="main__recipe-detail-container">
-                            <div class="main__recipe-detail-wrapper wrapper">
-                                <div class="main__recipe-detail-text-content">
-                                    <label class="main__recipe-detail-last-updated-title" for="cooking-time">Last Updated</label>
-                                    <p class="main__recipe-detail-last-updated-number"id="last-updated">20 Minutes Ago</p>    
-                                </div>
-                            </div>
-                        </div>
-                </div>
+                <!-- End Main Section Recipe Container Column For Recipe Attributes - Text Content-->
+                <i class="fas fa-edit main__recipe-detail-edit-icon"></i>
+              </div>
+              <!-- End Main Section Recipe Container Column For Recipe Attributes - Wrapper-->
             </div>
-        </div>       
+            <!-- End Main Section Recipe Container Column For Recipe Attributes - Cuisine Type Container-->
+            <!-- Start Main Section Recipe Container Column For Recipe Attributes - Serving Size Container-->
+            <div
+              class="main__recipe-detail-container display-mode"
+              id="main__serving-size-container"
+            >
+              <!-- Start Main Section Recipe Container Column For Recipe Attributes - Wrapper-->
+              <div class="main__recipe-detail-wrapper wrapper">
+                <!-- Start Main Section Recipe Container Column For Recipe Attributes - Text Content-->
+                <div class="main__recipe-detail-text-content">
+                  <label
+                    class="main__recipe-detail-serving-size-title"
+                    for="serving-size"
+                    >Serving Size</label
+                  >
+                  <input
+                    class="main__recipe-detail-serving-size-number"
+                    type="number"
+                    name="serving-size"
+                    value="0"
+                    min="0"
+                    max="9999"
+                  />
+                </div>
+                <!-- End Main Section Recipe Container Column For Recipe Attributes - Text Content-->
+                <i class="fas fa-edit main__recipe-detail-edit-icon"></i>
+              </div>
+              <!-- End Main Section Recipe Container Column For Recipe Attributes - Wrapper-->
+            </div>
+            <!-- End Main Section Recipe Container Column For Recipe Attributes - Serving Size Container-->
+            <!-- Start Main Section Recipe Container Column For Recipe Attributes - Cooking Time Container-->
+            <div
+              class="main__recipe-detail-container display-mode"
+              id="main__cooking-time-container"
+            >
+              <!-- Start Main Section Recipe Container Column For Recipe Attributes - Wrapper-->
+              <div class="main__recipe-detail-wrapper wrapper">
+                <!-- Start Main Section Recipe Container Column For Recipe Attributes - Text Content-->
+                <div class="main__recipe-detail-text-content">
+                  <label
+                    class="main__recipe-detail-cooking-time-title"
+                    for="cooking-time"
+                    >Cooking Time</label
+                  >
+                  <!-- Start Main Section Recipe Container Column For Recipe Attributes - Cooking Time Container -->
+                  <div class="main__recipe-detail-cooking-time-container">
+                    <!-- Start Main Section Recipe Container Column For Recipe Attributes - Cooking Time Hours Container -->
+                    <div
+                      class="main__recipe-detail-cooking-time-hours-container"
+                    >
+                      <input
+                        class="main__recipe-detail-cooking-time-hours-number"
+                        type="number"
+                        name="cooking-time-hours"
+                        value="0"
+                        min="0"
+                        max="99"
+                      />
+                      <label
+                        class="main__recipe-detail-cooking-time-hours-label"
+                        for="cooking-time-hours"
+                        >Hours</label
+                      >
+                    </div>
+                    <!-- End Main Section Recipe Container Column For Recipe Attributes - Cooking Time Hours Container -->
+                    <!-- Start Main Section Recipe Container Column For Recipe Attributes - Cooking Time Minutes Container -->
+                    <div
+                      class="main__recipe-detail-cooking-time-minutes-container"
+                    >
+                      <input
+                        class="main__recipe-detail-cooking-time-minutes-number"
+                        type="number"
+                        name="cooking-time-minutes"
+                        value="0"
+                        min="0"
+                        max="99"
+                      />
+                      <label
+                        class="main__recipe-detail-cooking-time-minutes-label"
+                        for="cooking-time-minutes"
+                        >Minutes</label
+                      >
+                    </div>
+                    <!-- End Main Section Recipe Container Column For Recipe Attributes - Cooking Time Minutes Container -->
+                  </div>
+                  <!-- End Main Section Recipe Container Column For Recipe Attributes - Cooking Time Container -->
+                </div>
+                <!-- End Main Section Recipe Container Column For Recipe Attributes - Text Content-->
+                <i class="fas fa-edit main__recipe-detail-edit-icon"></i>
+              </div>
+              <!-- End Main Section Recipe Container Column For Recipe Attributes - Wrapper-->
+            </div>
+            <!-- End Main Section Recipe Container Column For Recipe Attributes - Cooking Time Container-->
+            <!-- Start Main Section Recipe Container Column For Recipe Attributes - Last Updated Container-->
+            <div class="main__recipe-detail-container">
+              <!-- Start Main Section Recipe Container Column For Recipe Attributes - Wrapper-->
+              <div class="main__recipe-detail-wrapper wrapper">
+                <!-- Start Main Section Recipe Container Column For Recipe Attributes - Text Content-->
+                <div class="main__recipe-detail-text-content">
+                  <label
+                    class="main__recipe-detail-last-updated-title"
+                    for="cooking-time"
+                    >Last Updated</label
+                  >
+                  <p
+                    class="main__recipe-detail-last-updated-number"
+                    id="last-updated"
+                  ></p>
+                </div>
+                <!-- End Main Section Recipe Container Column For Recipe Attributes - Text Content-->
+              </div>
+              <!-- End Main Section Recipe Container Column For Recipe Attributes - Wrapper-->
+            </div>
+            <!-- End Main Section Recipe Container Column For Recipe Attributes - Last Updated Container-->
+          </div>
+          <!-- End Main Section Recipe Container Column For Recipe Attributes-->
+        </div>
+        <!-- End Main Section Recipe Container -->
+      </div>
+      <!-- End Main Section Wrapper -->
     </main>
-</body>
+    <!-- End Main Section -->
+    <script src="scripts/edit-bundle.js"></script>
+  </body>
 </html>
