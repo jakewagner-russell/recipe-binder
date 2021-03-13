@@ -1,59 +1,287 @@
-.sidebar-filter-menu, .sidebar-filter-menu__filter-type-col, .sidebar-filter-menu__filter-options-col, .main, .main__message-container-text-content, .edit-page .main__recipe-container-col, .edit-page .main__step-container, .edit-page .main__recipe-detail-text-content, .edit-page .main__ingredient-container, .edit-page .main__recipe-detail-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.edit-page .main__step-container,
+.edit-page .main__ingredient-container,
+.edit-page .main__recipe-detail-container,
+.edit-page .main__recipe-container-col,
+.edit-page .main__recipe-detail-text-content,
+.main,
+.main__message-container,
+.sidebar-filter-menu__filter-type-col,
+.sidebar-filter-menu__filter-options-col,
+.sidebar-filter-menu {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-button, .header__wrapper, .header__logo-container, .header__search-icon, .sidebar-filter-menu__sort-by-section, .sidebar-filter-menu__filter-options-container, .sidebar-filter-menu__filter-type, .main__title-button-container, .main__recipe-card-main-section__wrapper, .main__recipe-card-drop-down__wrapper, .main__message-container, .edit-page .main__recipe-title, .edit-page .main__column-title-container, .edit-page .main__instructions-title-container, .edit-page .main__ingredients-title-container, .edit-page .main__recipe-container, .edit-page .main__step-title-container, .edit-page .main__ingredient-remove-button, .edit-page .main__ingredient-wrapper, .edit-page .main__ingredient-button-container, .edit-page .main__recipe-detail-wrapper, .edit-page .main__recipe-detail-cooking-time-container, .edit-page .main__recipe-detail-cooking-time-hours-container, .edit-page .main__recipe-detail-cooking-time-minutes-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.edit-page .main__ingredient-wrapper,
+.edit-page .main__ingredient-button-container,
+.edit-page .main__ingredient-remove-button,
+.edit-page .main__step-title-container,
+.edit-page .main__column-title-container,
+.edit-page .main__recipe-container-col__title-container,
+.edit-page .main__recipe-container,
+.edit-page .main__recipe-detail-cooking-time-hours-container,
+.edit-page .main__recipe-detail-cooking-time-minutes-container,
+.edit-page .main__recipe-detail-cooking-time-container,
+.edit-page .main__recipe-detail-wrapper,
+.edit-page .main__recipe-title-container,
+.main__recipe-card-main-section__wrapper,
+.main__recipe-card-drop-down__wrapper,
+.main__title-button-container,
+.main__message-container,
+.sidebar-filter-menu__filter-type,
+.sidebar-filter-menu__filter-options-container,
+.sidebar-filter-menu__sort-by-section,
+.header__wrapper,
+.header__logo-container,
+.header__search-icon,
+button {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
 
-button:hover, .header__search-icon:hover, .header__home-icon:hover, .sidebar-filter-menu__filter-options-checkbox, .sidebar-filter-menu__filter-options-checkbox-container, .sidebar-filter-menu__filter-options-checkbox-container:hover input ~ .sidebar-filter-menu__filter-options-checkmark, .sidebar-filter-menu__filter-type-right-arrow, .sidebar-filter-menu__filter-type:hover, .sidebar-filter-menu__filter-type.clicked, .sidebar-filter-menu__filter-type:hover .sidebar-filter-menu__filter-type-right-arrow, .main__recipe-card-main-section:hover, .edit-page .main__recipe-title.display-mode:hover, .edit-page .main__step-container.display-mode:hover, .edit-page .main__ingredient-container.display-mode:hover, .edit-page .main__recipe-detail-container.display-mode:hover, .edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-cuisine-type, .edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-serving-size-number, .edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-cooking-time-hours-number, .edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-cooking-time-minutes-number, .edit-page .main__step-edit-icon:hover, .edit-page .main__ingredient-edit-icon:hover, .edit-page .main__recipe-detail-edit-icon:hover, .edit-page .main__recipe-title-edit-icon:hover, .header__search-icon, .header__home-icon, .sidebar-filter-menu, .sidebar-filter-menu__filter-options-checkbox-container input:checked ~ .sidebar-filter-menu__filter-options-checkmark, .sidebar-filter-menu__filter-options-checkmark, .sidebar-filter-menu__filter-type, .main__recipe-card.open, .main__recipe-card.open .main__recipe-card-main-section, .main__recipe-card.open .main__recipe-card-drop-down, .main__recipe-card-main-section, .main__recipe-card-down-arrow-icon, .main__recipe-card-drop-down, .edit-page .main__recipe-title, .edit-page .main__step-container, .edit-page .main__step-container.display-mode .main__step-remove-button, .edit-page .main__ingredient-container.display-mode .main__ingredient-remove-button, .edit-page .main__recipe-detail-container, .edit-page .main__recipe-detail-container.display-mode .main__recipe-detail-remove-button, .edit-page .main__recipe-detail-edit-icon, .edit-page .main__step-edit-icon, .edit-page .main__ingredient-edit-icon, .edit-page .main__recipe-title-edit-icon {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+.edit-page .main__step-edit-icon,
+.edit-page .main__ingredient-edit-icon,
+.edit-page .main__step-container.display-mode,
+.edit-page .main__step-container.edit-mode,
+.edit-page .main__ingredient-container.display-mode,
+.edit-page .main__ingredient-container.edit-mode,
+.edit-page .main__recipe-detail-container.display-mode,
+.edit-page .main__recipe-detail-container.edit-mode,
+.edit-page .main__step,
+.edit-page .main__recipe-detail-edit-icon,
+.edit-page .main__recipe-title-input,
+.edit-page .main__recipe-title-edit-icon,
+.edit-page .main__recipe-title-container.edit-mode .main__recipe-title-input,
+.edit-page
+  .main__recipe-title-container.edit-mode
+  .main__recipe-title-edit-icon,
+.edit-page .main__recipe-title-container *,
+.edit-page .main__recipe-title-container,
+.main__recipe-card-main-section,
+.sidebar-filter-menu,
+.sidebar-filter-menu *,
+.sidebar-filter-menu__filter-type-right-arrow,
+.sidebar-filter-menu__filter-type,
+.sidebar-filter-menu__filter-options-checkmark,
+.dark-overlay,
+.dark-overlay.open,
+.header__search-icon,
+.header__home-icon,
+.edit-page .main__recipe-title-edit-icon:hover,
+.edit-page .main__step-edit-icon:hover,
+.edit-page .main__ingredient-edit-icon:hover,
+.edit-page .main__recipe-detail-edit-icon:hover,
+.edit-page .main__step-container.display-mode:hover,
+.edit-page .main__ingredient-container.display-mode:hover,
+.edit-page .main__recipe-detail-container.display-mode:hover,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-cuisine-type,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-serving-size-number,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-cooking-time-hours-number,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-cooking-time-minutes-number,
+.edit-page .main__recipe-title-container.display-mode:hover,
+.main__recipe-card-main-section:hover,
+.sidebar-filter-menu__filter-type:hover,
+.sidebar-filter-menu__filter-type.clicked,
+.sidebar-filter-menu__filter-type.clicked
+  .sidebar-filter-menu__filter-type-right-arrow,
+.sidebar-filter-menu__filter-options-checkbox-container,
+.sidebar-filter-menu__filter-options-checkbox-container:hover
+  input
+  ~ .sidebar-filter-menu__filter-options-checkmark,
+.sidebar-filter-menu__filter-options-checkbox-container
+  input:checked
+  ~ .sidebar-filter-menu__filter-options-checkmark,
+.sidebar-filter-menu__filter-options-checkbox,
+.header__search-icon:hover,
+.header__home-icon:hover,
+button:hover {
+  transition: 0.3s;
 }
 
 .main__recipe-card.open .main__recipe-card-main-section {
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-input, button,
-textarea, .sidebar-filter-menu__filter-options-col, .edit-page .main__recipe-title, .edit-page .main__recipe-title-input, .edit-page .main__step-container.edit-mode .main__step-text-content, .edit-page .main__ingredient-container.edit-mode .main__ingredient-type, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cuisine-type, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-serving-size-number, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cooking-time-hours-number, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cooking-time-minutes-number, .edit-page .main__step-container, .edit-page .main__ingredient-container, .edit-page .main__recipe-detail-container {
+.edit-page .main__step-container.edit-mode .main__step-type,
+.edit-page .main__step-container.edit-mode .main__step-cuisine-type,
+.edit-page .main__step-container.edit-mode .main__step-serving-size-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__step-cooking-time-hours-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__step-cooking-time-minutes-number,
+.edit-page .main__step-container.edit-mode .main__ingredient-type,
+.edit-page .main__step-container.edit-mode .main__ingredient-cuisine-type,
+.edit-page
+  .main__step-container.edit-mode
+  .main__ingredient-serving-size-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__ingredient-cooking-time-hours-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__ingredient-cooking-time-minutes-number,
+.edit-page .main__step-container.edit-mode .main__recipe-detail-type,
+.edit-page .main__step-container.edit-mode .main__recipe-detail-cuisine-type,
+.edit-page
+  .main__step-container.edit-mode
+  .main__recipe-detail-serving-size-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__recipe-detail-cooking-time-hours-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__recipe-detail-cooking-time-minutes-number,
+.edit-page .main__ingredient-container.edit-mode .main__step-type,
+.edit-page .main__ingredient-container.edit-mode .main__step-cuisine-type,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__step-serving-size-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__step-cooking-time-hours-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__step-cooking-time-minutes-number,
+.edit-page .main__ingredient-container.edit-mode .main__ingredient-type,
+.edit-page .main__ingredient-container.edit-mode .main__ingredient-cuisine-type,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__ingredient-serving-size-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__ingredient-cooking-time-hours-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__ingredient-cooking-time-minutes-number,
+.edit-page .main__ingredient-container.edit-mode .main__recipe-detail-type,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__recipe-detail-cuisine-type,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__recipe-detail-serving-size-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__recipe-detail-cooking-time-hours-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__recipe-detail-cooking-time-minutes-number,
+.edit-page .main__recipe-detail-container.edit-mode .main__step-type,
+.edit-page .main__recipe-detail-container.edit-mode .main__step-cuisine-type,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__step-serving-size-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__step-cooking-time-hours-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__step-cooking-time-minutes-number,
+.edit-page .main__recipe-detail-container.edit-mode .main__ingredient-type,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__ingredient-cuisine-type,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__ingredient-serving-size-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__ingredient-cooking-time-hours-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__ingredient-cooking-time-minutes-number,
+.edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-type,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cuisine-type,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-serving-size-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cooking-time-hours-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cooking-time-minutes-number,
+.edit-page .main__step-container.edit-mode .main__step-text-content,
+.edit-page .main__step-container.edit-mode .main__ingredient-text-content,
+.edit-page .main__ingredient-container.edit-mode .main__step-text-content,
+.edit-page .main__ingredient-container.edit-mode .main__ingredient-text-content,
+.edit-page .main__recipe-detail-container.edit-mode .main__step-text-content,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__ingredient-text-content,
+.edit-page .main__step-container,
+.edit-page .main__ingredient-container,
+.edit-page .main__recipe-detail-container,
+.edit-page .main__recipe-title-input,
+.edit-page .main__recipe-title-container,
+.sidebar-filter-menu__filter-options-col,
+input,
+button,
+textarea {
   border-radius: 0.6rem;
 }
 
-button:hover, .header__search-icon:hover, .header__home-icon:hover, .sidebar-filter-menu__filter-options-checkbox, .sidebar-filter-menu__filter-options-checkbox-container, .sidebar-filter-menu__filter-options-checkbox-container:hover input ~ .sidebar-filter-menu__filter-options-checkmark, .sidebar-filter-menu__filter-type-right-arrow, .sidebar-filter-menu__filter-type:hover, .sidebar-filter-menu__filter-type.clicked, .sidebar-filter-menu__filter-type:hover .sidebar-filter-menu__filter-type-right-arrow, .main__recipe-card-main-section:hover, .edit-page .main__recipe-title.display-mode:hover, .edit-page .main__step-container.display-mode:hover, .edit-page .main__ingredient-container.display-mode:hover, .edit-page .main__recipe-detail-container.display-mode:hover, .edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-cuisine-type, .edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-serving-size-number, .edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-cooking-time-hours-number, .edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-cooking-time-minutes-number, .edit-page .main__step-edit-icon:hover, .edit-page .main__ingredient-edit-icon:hover, .edit-page .main__recipe-detail-edit-icon:hover, .edit-page .main__recipe-title-edit-icon:hover {
+.edit-page .main__recipe-title-edit-icon:hover,
+.edit-page .main__step-edit-icon:hover,
+.edit-page .main__ingredient-edit-icon:hover,
+.edit-page .main__recipe-detail-edit-icon:hover,
+.edit-page .main__step-container.display-mode:hover,
+.edit-page .main__ingredient-container.display-mode:hover,
+.edit-page .main__recipe-detail-container.display-mode:hover,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-cuisine-type,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-serving-size-number,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-cooking-time-hours-number,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-cooking-time-minutes-number,
+.edit-page .main__recipe-title-container.display-mode:hover,
+.main__recipe-card-main-section:hover,
+.sidebar-filter-menu__filter-type-right-arrow,
+.sidebar-filter-menu__filter-type:hover,
+.sidebar-filter-menu__filter-type.clicked,
+.sidebar-filter-menu__filter-type.clicked
+  .sidebar-filter-menu__filter-type-right-arrow,
+.sidebar-filter-menu__filter-options-checkbox-container,
+.sidebar-filter-menu__filter-options-checkbox-container:hover
+  input
+  ~ .sidebar-filter-menu__filter-options-checkmark,
+.sidebar-filter-menu__filter-options-checkbox-container
+  input:checked
+  ~ .sidebar-filter-menu__filter-options-checkmark,
+.sidebar-filter-menu__filter-options-checkbox,
+.header__search-icon:hover,
+.header__home-icon:hover,
+button:hover {
   cursor: pointer;
 }
 
 .edit-page .header__home-icon:hover {
-  -webkit-filter: brightness(2);
-          filter: brightness(2);
+  filter: brightness(2);
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -67,19 +295,19 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
-
 body::before {
   content: "";
-  background: url(https://source.unsplash.com/collection/345760/1600x900) no-repeat center;
+  background: url(https://source.unsplash.com/collection/345760/1600x900)
+    no-repeat center;
   background-size: cover;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
   mix-blend-mode: overlay;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.4;
+  opacity: 0.5;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -87,17 +315,16 @@ body::before {
 
 .wrapper {
   width: 80%;
+  max-width: 204.8rem;
   margin: 0 auto;
 }
 
 button {
   border: none;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 1vw + 1rem, 2.4rem);
   font-weight: 700;
 }
-
 button i {
   margin-left: 1rem;
 }
@@ -113,8 +340,8 @@ label {
 input {
   padding: 0;
 }
-
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -124,170 +351,173 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   padding: 8rem 0;
   color: #2c3e50;
 }
-
 .header__wrapper {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .header__logo-container {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
-
 .header__utensils-icon {
   margin-right: 2.4rem;
 }
-
-.header__search-icon, .header__home-icon {
+.header__search-icon,
+.header__home-icon {
   font-size: 3.5rem;
+  color: #2c3e50;
 }
-
-.header__utensils-icon, .header__logo-title {
+.header__search-icon:hover,
+.header__home-icon:hover {
+  color: #56799c;
+}
+.header__utensils-icon,
+.header__logo-title {
   font-size: 5rem;
 }
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 4rem 0;
+  }
+  .header__search-icon,
+  .header__home-icon {
+    font-size: clamp(1rem, 2vw + 1rem, 3.5rem);
+  }
+  .header__utensils-icon {
+    margin-right: clamp(0.75rem, 4.5vw, 2.4rem);
+  }
+  .header__utensils-icon,
+  .header__logo-title {
+    font-size: clamp(1rem, 2vw + 1rem, 3.5rem);
+  }
+}
 
+.dark-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100vw;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+}
+.dark-overlay.open {
+  left: 0;
+}
 .sidebar-filter-menu {
   color: #fff;
   background: #2c3e50;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   position: absolute;
-  top: 0;
   right: 0;
-  width: 40vw;
+  bottom: 0;
+  transform: translateX(100vw);
+  width: 30vw;
   max-width: 80rem;
   height: 100vh;
-  padding: 8rem 0;
+  padding: 4rem 0;
   overflow-y: auto;
+  z-index: 3;
 }
-
 .sidebar-filter-menu__wrapper {
   position: relative;
   padding-top: 6.4rem;
 }
-
 .sidebar-filter-menu__close-btn {
   font-size: 3.5rem;
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
 }
-
 .sidebar-filter-menu__close-btn:hover {
   color: #f1c40f;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-
 .sidebar-filter-menu__sort-by-section {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-
 .sidebar-filter-menu__sort-by-section-title {
   margin: 6.4rem 0 1rem;
 }
-
 .sidebar-filter-menu__filter-recipe-label {
   display: block;
   margin-bottom: 1.2rem;
 }
-
 .sidebar-filter-menu__filter-recipe-input {
   color: #fff;
   background: #2c3e50;
-  -webkit-filter: brightness(1.25);
-          filter: brightness(1.25);
-  width: 100%;
+  filter: brightness(1.25);
   font-size: 1.4rem;
-  padding: 2rem;
+  padding: 2.4rem;
   border: none;
 }
-
 .sidebar-filter-menu__filter-options-col {
   color: #2c3e50;
   background: #fff;
   padding: 3rem 0;
   max-height: 50vh;
+  opacity: 0;
 }
-
 .sidebar-filter-menu__filter-options-col-wrapper {
   max-height: 80%;
   overflow-y: scroll;
 }
-
 .sidebar-filter-menu__filter-options-col-wrapper::-webkit-scrollbar {
   background: none;
 }
-
 .sidebar-filter-menu__filter-options-col-wrapper::-webkit-scrollbar-thumb {
   background: #2c3e50;
   border-radius: 1rem;
 }
-
 .sidebar-filter-menu__filter-options-container {
   position: relative;
   margin: 2.4rem 0;
 }
-
 .sidebar-filter-menu__filter-options-container:first-of-type {
   margin-top: 0;
 }
-
 .sidebar-filter-menu__filter-options-container:last-of-type {
   margin-bottom: 0;
 }
-
 .sidebar-filter-menu__filter-options-checkbox {
   position: absolute;
   opacity: 0;
   height: 0;
   width: 0;
 }
-
 .sidebar-filter-menu__filter-options-checkbox-container {
   height: 2rem;
   padding-left: 3.5rem;
   margin-bottom: 0;
-  font-size: 2rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  font-size: clamp(1.6rem, 1vw + 1rem, 2.4rem);
+  user-select: none;
 }
-
-.sidebar-filter-menu__filter-options-checkbox-container:hover input ~ .sidebar-filter-menu__filter-options-checkmark {
-  background-color: #f1c40f;
-}
-
-.sidebar-filter-menu__filter-options-checkbox-container input:checked ~ .sidebar-filter-menu__filter-options-checkmark {
-  background-color: #f1c40f;
-}
-
-.sidebar-filter-menu__filter-options-checkbox-container input:checked ~ .sidebar-filter-menu__filter-options-checkmark::after {
+.sidebar-filter-menu__filter-options-checkbox-container
+  input:checked
+  ~ .sidebar-filter-menu__filter-options-checkmark::after {
   display: block;
 }
-
+.sidebar-filter-menu__filter-options-checkbox-container:hover
+  input
+  ~ .sidebar-filter-menu__filter-options-checkmark,
+.sidebar-filter-menu__filter-options-checkbox-container
+  input:checked
+  ~ .sidebar-filter-menu__filter-options-checkmark {
+  background-color: #f1c40f;
+}
+@media only screen and (max-width: 1440px) {
+  .sidebar-filter-menu__filter-options-checkbox-container {
+    font-size: 1rem;
+  }
+}
 .sidebar-filter-menu__filter-options-checkmark {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
   width: 2rem;
   background-color: #2c3e50;
 }
-
 .sidebar-filter-menu__filter-options-checkmark::after {
   content: "";
-  position: absolute;
   display: none;
   left: 0.65rem;
   top: 0.2rem;
@@ -295,600 +525,758 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   height: 1rem;
   border: solid #2c3e50;
   border-width: 0 0.3rem 0.3rem 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
+.sidebar-filter-menu__filter-options-checkmark,
+.sidebar-filter-menu__filter-options-checkmark::after {
+  position: absolute;
+}
 .sidebar-filter-menu__filter-options-label {
   font-weight: 700;
   font-size: 1.4rem;
+  width: 18ch;
 }
-
 .sidebar-filter-menu__filter-type {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
+.sidebar-filter-menu__filter-type-col {
+  align-items: flex-start;
+}
 .sidebar-filter-menu__filter-type-right-arrow {
   opacity: 0;
-  -webkit-transform: translateX(-3rem);
-          transform: translateX(-3rem);
+  transform: translateX(-3rem);
 }
-
-.sidebar-filter-menu__filter-type-right-arrow, .sidebar-filter-menu__filter-type:hover, .sidebar-filter-menu__filter-type.clicked {
+.sidebar-filter-menu__filter-type-right-arrow,
+.sidebar-filter-menu__filter-type:hover,
+.sidebar-filter-menu__filter-type.clicked {
   color: #f1c40f;
 }
-
-.sidebar-filter-menu__filter-type:hover .sidebar-filter-menu__filter-type-right-arrow {
+.sidebar-filter-menu__filter-type.clicked
+  .sidebar-filter-menu__filter-type-right-arrow {
   opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
-
-.sidebar-filter-menu__filter-type-col, .sidebar-filter-menu__filter-options-col {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+.sidebar-filter-menu__filter-type-col,
+.sidebar-filter-menu__filter-options-col {
+  justify-content: space-between;
   width: 45%;
   height: 100%;
 }
-
-.sidebar-filter-menu__filter-type, .sidebar-filter-menu__filter-options-col {
+.sidebar-filter-menu__filter-type,
+.sidebar-filter-menu__filter-options-col {
   margin: 1rem 0;
 }
-
-.sidebar-filter-menu__filter-recipe-label, .sidebar-filter-menu__filter-type, .sidebar-filter-menu__sort-by-section-title {
+.sidebar-filter-menu__filter-recipe-label,
+.sidebar-filter-menu__filter-type,
+.sidebar-filter-menu__sort-by-section-title {
   font-size: 3.5rem;
   font-weight: 700;
+}
+.sidebar-filter-menu__filter-recipe-input,
+.sidebar-filter-menu__filter-recipe-label,
+.sidebar-filter-menu__filter-type,
+.sidebar-filter-menu__sort-by-section-title,
+.sidebar-filter-menu.open {
   width: 100%;
 }
+.sidebar-filter-menu.open {
+  transform: translateX(0);
+}
+@media only screen and (max-width: 1440px) {
+  .sidebar-filter-menu__filter-options-checkbox-container {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sidebar-filter-menu__sort-by-section {
+    flex-direction: column;
+  }
+  .sidebar-filter-menu__filter-type-col,
+  .sidebar-filter-menu__filter-options-col {
+    width: 100%;
+  }
+  .sidebar-filter-menu__filter-options-label {
+    font-size: clamp(0.75rem, 4.5vw, 2.4rem);
+  }
+  .sidebar-filter-menu__filter-options-checkmark {
+    top: calc(50% - 1rem);
+  }
+  .sidebar-filter-menu__filter-options-col {
+    max-height: none;
+  }
+  .sidebar-filter-menu__filter-options-col-wrapper {
+    width: 85%;
+    max-height: none;
+    overflow-y: visible;
+  }
+  .sidebar-filter-menu__filter-type-col {
+    margin-bottom: 4rem;
+  }
+  .sidebar-filter-menu__filter-type.clicked
+    .sidebar-filter-menu__filter-type-right-arrow {
+    transform: rotate(90deg);
+  }
+  .sidebar-filter-menu__filter-recipe-input {
+    font-size: clamp(1rem, 10vw, 1.4rem);
+  }
+  .sidebar-filter-menu__close-btn,
+  .sidebar-filter-menu__filter-recipe-label,
+  .sidebar-filter-menu__filter-type,
+  .sidebar-filter-menu__sort-by-section-title {
+    font-size: clamp(1rem, 2vw + 1rem, 3.5rem);
+  }
+}
+@media only screen and (max-width: 420px) {
+  .sidebar-filter-menu__filter-type-col {
+    margin-bottom: 1rem;
+  }
+}
 
+.dark-overlay,
+.sidebar-filter-menu {
+  top: 0;
+  opacity: 0;
+}
+.dark-overlay.open,
+.sidebar-filter-menu.open {
+  opacity: 1;
+}
+
+.main {
+  padding-bottom: 6rem;
+}
+.main__wrapper {
+  overflow-y: hidden;
+}
 .main__title-button-container {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .main__add-button {
-  color: #2c3e50;
-  background: #fff;
-  padding: 1.6rem;
-}
-
-.main__add-button:hover {
   color: #fff;
   background: #2c3e50;
+  padding: 1.6rem;
 }
-
+.main__add-button:hover {
+  color: #2c3e50;
+  background: #fff;
+}
 .main__add-circle-icon {
   padding-left: 0.5em;
 }
-
 .main__recipe-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fit, 10rem);
   gap: 1rem;
-  -ms-grid-rows: (10rem)[auto-fit];
-      grid-template-rows: repeat(auto-fit, 10rem);
 }
-
+@media only screen and (max-width: 1660px) {
+  .main__recipe-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .main__recipe-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .main__recipe-card {
   width: 100%;
 }
-
 .main__recipe-card.open {
-  grid-row: auto / span 2;
+  grid-row: auto/span 2;
 }
-
 .main__recipe-card.open .main__recipe-card-main-section {
   border-radius: 1rem 1rem 0 0;
   height: 50%;
 }
-
 .main__recipe-card.open .main__recipe-card-drop-down {
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   padding: 1.8rem 0 1.2rem;
   height: 100%;
   opacity: 1;
 }
-
 .main__recipe-card.open .main__recipe-card-drop-down * {
   opacity: 1;
   height: auto;
 }
-
 .main__recipe-card.open .main__recipe-card-down-arrow-icon {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 .main__recipe-card-main-section {
   color: #fff;
   background: #2c3e50;
   position: relative;
   z-index: 2;
-  width: 100%;
   height: 100%;
   border-radius: 1rem;
   overflow: hidden;
   padding: 2.4rem 0;
 }
-
 .main__recipe-card-main-section:hover {
   color: #2c3e50;
   background: #fff;
 }
-
 .main__recipe-card-down-arrow-icon {
   font-size: 3.5rem;
 }
-
 .main__recipe-card-drop-down {
   color: #2c3e50;
   background: #fff;
-  width: 100%;
   height: 0;
   top: 100%;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   border-radius: 1rem;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  opacity: 0;
+  transform: translateY(-100%);
 }
-
+.main__recipe-card-drop-down,
 .main__recipe-card-drop-down * {
   opacity: 0;
 }
-
 .main__recipe-card-drop-down__text-content {
   width: 45%;
 }
-
 .main__recipe-card-drop-down__button {
   color: #fff;
   background: #2c3e50;
-  font-size: 1.4rem;
   font-weight: 700;
   padding: 1.6rem 1rem;
 }
-
 .main__recipe-card-drop-down__button:hover {
   color: #2c3e50;
   background: #fff;
   background: #f1c40f;
 }
-
-.main__recipe-card-drop-down__spoon {
+.main__recipe-card-drop-down__spoon,
+.main__recipe-card-drop-down__cooking-time-hours {
   margin-right: 0.6rem;
 }
-
-.main__recipe-card-drop-down__ingredient-amount, .main__recipe-card-drop-down__serving-amount, .main__recipe-card-drop-down__cooking-time {
-  font-size: 1.4rem;
+.main__recipe-card-drop-down__ingredient-amount,
+.main__recipe-card-drop-down__serving-amount,
+.main__recipe-card-drop-down__cooking-time {
   margin: 0.6rem;
 }
-
-.main__recipe-card-drop-down__ingredients-number, .main__recipe-card-drop-down__servings-number, .main__recipe-card-drop-down__cooking-time-hourss-number, .main__recipe-card-drop-down__cooking-time-minutes-number {
+.main__recipe-card-drop-down__ingredient-amount,
+.main__recipe-card-drop-down__serving-amount,
+.main__recipe-card-drop-down__cooking-time,
+.main__recipe-card-drop-down__button {
+  font-size: 1.4rem;
+}
+.main__recipe-card-drop-down__ingredients-number,
+.main__recipe-card-drop-down__servings-number,
+.main__recipe-card-drop-down__cooking-time-hours-number,
+.main__recipe-card-drop-down__cooking-time-minutes-number {
   font-weight: 700;
 }
-
-.main__recipe-card-main-section__wrapper, .main__recipe-card-drop-down__wrapper {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.main__recipe-card-main-section,
+.main__recipe-card-drop-down {
+  width: 100%;
+}
+.main__recipe-card-main-section__wrapper,
+.main__recipe-card-drop-down__wrapper {
+  justify-content: space-between;
   width: 90%;
   height: 100%;
 }
-
 .main__recipe-title {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 1vw + 1rem, 2.4rem);
   margin: 0 0 0.5rem 0;
+  max-width: 26ch;
 }
-
 .main__recipe-description {
   font-size: 1.4rem;
   margin: 0;
 }
-
+.main__recipe-description-divider {
+  display: inline-block;
+  margin: 0 0.6rem;
+}
 .main__message-container {
   width: 100%;
-  height: 50rem;
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  margin-top: 4rem;
 }
-
-.main__message-container-illustration {
-  width: 50%;
-  height: 100%;
-}
-
 .main__message-container-text-content {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 50%;
-  height: 100%;
+  align-items: flex-start;
   color: #2c3e50;
+  padding-left: 4rem;
 }
-
 .main__message-container-text-content-title {
   font-size: 5rem;
   margin-bottom: 0;
 }
-
 .main__message-container-text-content-subtitle {
   margin-top: 1rem;
   font-size: 3.5rem;
 }
-
-.main__title, .main__recipe-title-input {
+.main__message-container-illustration,
+.main__message-container-text-content {
+  width: 50%;
+}
+.main__message-container__message-container,
+.main__message-container-illustration,
+.main__message-container-text-content {
+  height: 100%;
+}
+.main__title,
+.main__recipe-title-input {
   color: #2c3e50;
   font-size: 3.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .main__recipe-title {
+    font-size: clamp(0.75rem, 4.5vw, 2.4rem);
+    max-width: 28ch;
+  }
+  .main__recipe-description {
+    font-size: clamp(1rem, 10vw, 1.4rem);
+  }
+  .main__recipe-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main__recipe-card:first-of-type.open {
+    grid-row: auto/span 13;
+  }
+  .main__recipe-card.open {
+    grid-row: span 23 / span 13;
+  }
+  .main__recipe-card.open .main__recipe-card-drop-down {
+    padding: 1.8rem 0;
+  }
+  .main__recipe-card-main-section__wrapper,
+  .main__recipe-card-drop-down__wrapper {
+    width: 87.5%;
+  }
+  .main__message-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+  .main__message-container-illustration {
+    width: 70%;
+  }
+  .main__message-container-text-content {
+    align-items: center;
+    margin-top: 2rem;
+    padding: 0;
+    text-align: center;
+  }
+  .main__message-container-text-content-title {
+    font-size: clamp(1rem, 2vw + 1rem, 3.5rem);
+  }
+  .main__message-container-text-content-subtitle {
+    font-size: clamp(0.75rem, 4.5vw, 2.4rem);
+  }
+  .main__message-container-text-content,
+  .main__message-container-text-content-title {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main__add-button {
+    font-size: clamp(0.75rem, 4.5vw, 2.4rem);
+    width: 100%;
+    max-width: 26rem;
+    justify-content: center;
+  }
+  .main__title {
+    font-size: clamp(1rem, 6vw, 5rem);
+    margin-bottom: 4rem;
+  }
+  .main__title-button-container {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .main__recipe-title {
+    max-width: 18ch;
+  }
+  .main__recipe-card:first-of-type.open {
+    grid-row: auto/span 24;
+  }
+  .main__recipe-card.open {
+    grid-row: span 33 / span 24;
+  }
+  .main__recipe-card.open .main__recipe-card-drop-down {
+    padding: 1.8rem 0;
+  }
+  .main__recipe-card-drop-down__button {
+    max-width: 20rem;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .main__recipe-card-drop-down__spoon {
+    margin: 0 1rem 0 0;
+  }
+  .main__recipe-card-drop-down__wrapper {
+    flex-direction: column;
+  }
+  .main__recipe-card-drop-down__text-content {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .main__recipe-card-drop-down__ingredient-amount,
+  .main__recipe-card-drop-down__serving-amount,
+  .main__recipe-card-drop-down__cooking-time {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+  .main__recipe-card-link,
+  .main__recipe-card-drop-down__button {
+    width: 100%;
+  }
+  .main__recipe-card-main-section__wrapper,
+  .main__recipe-card-drop-down__wrapper {
+    width: 80%;
+  }
 }
 
 .edit-page .main__title-button-container {
   margin-bottom: 8rem;
 }
-
-.edit-page .main__recipe-title {
+.edit-page .main__recipe-title-container {
   color: #2c3e50;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: 0;
 }
-
+.edit-page .main__recipe-title-container.display-mode {
+  padding: 1.4rem 1.4rem 1.4rem 0;
+}
+.edit-page .main__recipe-title-container.display-mode:hover {
+  background: #fff;
+  padding: 1.4rem 1.75rem;
+}
+.edit-page
+  .main__recipe-title-container.display-mode:hover
+  .main__recipe-title-edit-icon {
+  opacity: 1;
+}
+.edit-page .main__recipe-title-container.edit-mode {
+  background: #fff;
+  padding: 1.4rem 1.75rem;
+}
+.edit-page
+  .main__recipe-title-container.edit-mode
+  .main__recipe-title-edit-icon {
+  color: #56799c;
+  opacity: 1;
+}
+.edit-page
+  .main__recipe-title-container.edit-mode
+  .main__recipe-title-edit-icon:hover {
+  color: #2c3e50;
+}
+.edit-page .main__recipe-title-container.edit-mode .main__recipe-title-input {
+  padding: 1.4rem 1.6rem;
+  background: rgba(255, 255, 255, 0.4);
+  border: 0.2rem #56799c solid;
+  outline-color: invert;
+}
 .edit-page .main__recipe-title-input {
   font-size: 5rem;
   font-weight: 700;
   max-width: 25ch;
   margin-right: 2.4rem;
 }
-
 .edit-page .main__recipe-title-edit-icon {
   opacity: 0;
 }
-
 .edit-page .main__recipe-title-edit-icon:hover {
   color: #56799c;
 }
-
-.edit-page .main__recipe-title.display-mode {
-  padding: 1.4rem 1.4rem 1.4rem 0;
+@media only screen and (max-width: 1440px) {
+  .edit-page .main__recipe-title-input {
+    font-size: clamp(1rem, 6vw, 5rem);
+  }
+  .edit-page .main__recipe-title-container {
+    margin-right: 5rem;
+  }
 }
-
-.edit-page .main__recipe-title.display-mode:hover {
-  background: #fff;
-  padding: 1.4rem 1.75rem;
-}
-
-.edit-page .main__recipe-title.display-mode:hover .main__recipe-title-edit-icon {
-  opacity: 1;
-}
-
-.edit-page .main__recipe-title.edit-mode .main__recipe-title-edit-icon {
-  color: #56799c;
-  opacity: 1;
-}
-
-.edit-page .main__recipe-title.edit-mode .main__recipe-title-edit-icon:hover {
-  color: #2c3e50;
-}
-
-.edit-page .main__recipe-title.edit-mode .main__recipe-title-input {
-  padding: 1.4rem 1.6rem;
-  background: rgba(255, 255, 255, 0.4);
-  outline-color: invert;
-}
-
-.edit-page .main__delete-button {
-  background: #e74c3c;
-  color: #fff;
-  padding: 2.4rem;
-}
-
-.edit-page .main__delete-button:hover {
-  background: #fff;
-  color: #e74c3c;
-}
-
-.edit-page .main__column-title-container {
-  width: 100%;
-}
-
-.edit-page .main__instructions-title, .edit-page .main__ingredients-title {
-  font-size: 3.5rem;
-  margin-right: 3.5rem;
-}
-
-.edit-page .main__instructions-title-container, .edit-page .main__ingredients-title-container {
-  width: calc(100% / 3);
-  color: #2c3e50;
-}
-
-.edit-page .main__add-new-button, .edit-page .main__step-remove-button, .edit-page .main__ingredient-remove-button {
-  font-size: 1.4rem;
-  padding: 1.4rem;
-}
-
-.edit-page .main__add-new-button {
-  color: #fff;
-  background: #2c3e50;
-}
-
-.edit-page .main__add-new-button:hover {
-  color: #2c3e50;
-  background: #fff;
-}
-
-.edit-page .main__recipe-container {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.edit-page .main__recipe-container-col {
-  width: calc(100% / 3);
-}
-
-.edit-page .main__step-container.display-mode:hover {
-  color: #2c3e50;
-  background: #fff;
-}
-
-.edit-page .main__step-container.display-mode:hover .main__step-edit-icon {
-  opacity: 1;
-}
-
-.edit-page .main__step-container.display-mode .main__step-edit-icon {
-  opacity: 0;
-}
-
-.edit-page .main__step-container.display-mode .main__step-remove-button {
-  display: none;
-  height: 0;
-  padding: 0;
-}
-
-.edit-page .main__step-container.edit-mode .main__step-edit-icon {
-  opacity: 1;
-  color: #f1c40f;
-}
-
-.edit-page .main__step-container.edit-mode .main__step-text-content {
-  color: #2c3e50;
-  background: #fff;
-  padding: 1.4rem;
-}
-
-.edit-page .main__step-title {
-  margin: 0;
-  font-weight: 700;
-  font-size: 2.4rem;
-}
-
-.edit-page .main__step-title-container {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-bottom: 1rem;
-}
-
-.edit-page .main__step-text-content {
-  display: inline-block;
-  font-size: 1.6rem;
-}
-
-.edit-page .main__step-remove-button {
-  margin-top: 2rem;
-}
-
-.edit-page .main__ingredient-container {
-  width: 100%;
-}
-
-.edit-page .main__ingredient-container.display-mode:hover {
-  color: #2c3e50;
-  background: #fff;
-}
-
-.edit-page .main__ingredient-container.display-mode:hover .main__ingredient-edit-icon {
-  opacity: 1;
-}
-
-.edit-page .main__ingredient-container.display-mode .main__ingredient-edit-icon {
-  opacity: 0;
-}
-
-.edit-page .main__ingredient-container.display-mode .main__ingredient-remove-button {
-  display: none;
-  width: 0;
-  height: 0;
-  padding: 0;
-}
-
-.edit-page .main__ingredient-container.edit-mode .main__ingredient-edit-icon {
-  opacity: 1;
-  color: #f1c40f;
-}
-
-.edit-page .main__ingredient-container.edit-mode .main__ingredient-edit-icon:hover {
-  color: #fff;
-}
-
-.edit-page .main__ingredient-container.edit-mode .main__ingredient-type {
-  color: #2c3e50;
-  background: #fff;
-  padding: 1.4rem;
-}
-
-.edit-page .main__ingredient-wrapper {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.edit-page .main__ingredient-type {
-  display: inline-block;
-  font-weight: 700;
-  max-width: 15ch;
-  padding: 1rem;
-}
-
-.edit-page .main__ingredient-remove-button {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-right: 2.4rem;
-}
-
 .edit-page .main__recipe-detail-wrapper {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .edit-page .main__recipe-detail-container {
   height: 16rem;
 }
-
-.edit-page .main__recipe-detail-container.display-mode:hover {
-  color: #2c3e50;
-  background: #fff;
-}
-
-.edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-edit-icon {
-  opacity: 1;
-}
-
-.edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-cuisine-type, .edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-serving-size-number, .edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-cooking-time-hours-number, .edit-page .main__recipe-detail-container.display-mode:hover .main__recipe-detail-cooking-time-minutes-number {
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-cuisine-type,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-serving-size-number,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-cooking-time-hours-number,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-cooking-time-minutes-number {
   color: #2c3e50;
   background: none;
 }
-
-.edit-page .main__recipe-detail-container.display-mode .main__recipe-detail-edit-icon {
-  opacity: 0;
-}
-
-.edit-page .main__recipe-detail-container.display-mode .main__recipe-detail-remove-button {
-  display: none;
-  width: 0;
-  height: 0;
-  padding: 0;
-}
-
-.edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-edit-icon {
-  opacity: 1;
-  color: #f1c40f;
-}
-
-.edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-edit-icon:hover {
-  color: #fff;
-}
-
-.edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-serving-size-number {
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-serving-size-number {
   width: 10ch;
 }
-
-.edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cuisine-type, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-serving-size-number, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cooking-time-hours-number, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cooking-time-minutes-number {
-  color: #2c3e50;
-  background: #fff;
-  padding: 1.4rem;
-}
-
-.edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-serving-size-number::-webkit-inner-spin-button, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cooking-time-hours-number::-webkit-inner-spin-button, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cooking-time-minutes-number::-webkit-inner-spin-button {
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-serving-size-number::-webkit-inner-spin-button,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cooking-time-hours-number::-webkit-inner-spin-button,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cooking-time-minutes-number::-webkit-inner-spin-button {
   -webkit-appearance: auto;
 }
-
-.edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-serving-size-number::-webkit-outer-spin-button, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cooking-time-hours-number::-webkit-outer-spin-button, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cooking-time-minutes-number::-webkit-outer-spin-button {
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-serving-size-number::-webkit-outer-spin-button,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cooking-time-hours-number::-webkit-outer-spin-button,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cooking-time-minutes-number::-webkit-outer-spin-button {
   -webkit-appearance: auto;
 }
-
-.edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cooking-time-hours-number, .edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-cooking-time-minutes-number {
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cooking-time-hours-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cooking-time-minutes-number {
   width: 7ch;
   margin-right: 1rem;
 }
-
 .edit-page .main__recipe-detail-text-content {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
-
 .edit-page .main__recipe-detail-edit-icon {
   opacity: 0;
 }
-
 .edit-page .main__recipe-detail-cuisine-type {
   font-size: 1.6rem;
   max-width: 30ch;
 }
-
-.edit-page .main__recipe-detail-cuisine-title, .edit-page .main__recipe-detail-cuisine-type {
+.edit-page .main__recipe-detail-cuisine-title,
+.edit-page .main__recipe-detail-cuisine-type {
   display: block;
 }
-
 .edit-page .main__recipe-detail-serving-size-label {
   font-size: 1.6rem;
 }
-
 .edit-page .main__recipe-detail-serving-size-number {
   width: 5ch;
 }
-
 .edit-page .main__recipe-detail-cooking-time-hours-container {
   margin-right: 2rem;
 }
-
-.edit-page .main__recipe-detail-cooking-time-hours-number, .edit-page .main__recipe-detail-cooking-time-minutes-number {
+.edit-page .main__recipe-detail-cooking-time-hours-number,
+.edit-page .main__recipe-detail-cooking-time-minutes-number {
   width: 3ch;
 }
-
 .edit-page .main__recipe-detail-last-updated-number {
   margin: 0;
 }
-
-.edit-page .main__recipe-detail-container, .edit-page .main__recipe-detail-cuisine-title {
+.edit-page .main__recipe-detail-container,
+.edit-page .main__recipe-detail-cuisine-title {
   width: 100%;
 }
-
-.edit-page .main__recipe-detail-cuisine-title, .edit-page .main__recipe-detail-serving-size-title, .edit-page .main__recipe-detail-cooking-time-title, .edit-page .main__recipe-detail-last-updated-title {
+.edit-page .main__recipe-detail-cuisine-title,
+.edit-page .main__recipe-detail-serving-size-title,
+.edit-page .main__recipe-detail-cooking-time-title,
+.edit-page .main__recipe-detail-last-updated-title {
   font-weight: 700;
   font-size: 2.4rem;
   margin-bottom: 1rem;
 }
-
-.edit-page .main__recipe-detail-serving-size-number, .edit-page .main__recipe-detail-cooking-time-hours-number, .edit-page .main__recipe-detail-cooking-time-minutes-number, .edit-page .main__recipe-detail-last-updated-number {
+.edit-page .main__recipe-detail-serving-size-number,
+.edit-page .main__recipe-detail-cooking-time-hours-number,
+.edit-page .main__recipe-detail-cooking-time-minutes-number,
+.edit-page .main__recipe-detail-last-updated-number {
   background: none;
   color: #fff;
   border: none;
   outline-width: 0;
 }
-
-.edit-page .main__recipe-detail-serving-size-number, .edit-page .main__recipe-detail-serving-size-label, .edit-page .main__recipe-detail-cooking-time-hours-number, .edit-page .main__recipe-detail-cooking-time-hours-label, .edit-page .main__recipe-detail-cooking-time-minutes-number, .edit-page .main__recipe-detail-cooking-time-minutes-label, .edit-page .main__recipe-detail-last-updated-number, .edit-page .main__recipe-detail-last-updated-label {
+.edit-page .main__recipe-detail-serving-size-number,
+.edit-page .main__recipe-detail-serving-size-label,
+.edit-page .main__recipe-detail-cooking-time-hours-number,
+.edit-page .main__recipe-detail-cooking-time-hours-label,
+.edit-page .main__recipe-detail-cooking-time-minutes-number,
+.edit-page .main__recipe-detail-cooking-time-minutes-label,
+.edit-page .main__recipe-detail-last-updated-number,
+.edit-page .main__recipe-detail-last-updated-label {
   font-size: 1.6rem;
 }
-
-.edit-page .main__step-container, .edit-page .main__ingredient-container {
-  min-height: 16rem;
+.edit-page .main__recipe-container-col {
+  width: calc(100% / 3);
 }
-
-.edit-page .main__step-container, .edit-page .main__ingredient-container, .edit-page .main__recipe-detail-container {
+.edit-page .main__recipe-container-col.main__recipe-attributes-col {
+  margin-top: 10rem;
+}
+.edit-page .main__recipe-container-col__title-container {
+  height: 10rem;
+  color: #2c3e50;
+}
+.edit-page .main__recipe-container-col__content-container {
+  width: 100%;
+}
+.edit-page .main__recipe-container,
+.edit-page .main__recipe-container-col {
+  align-items: flex-start;
+}
+.edit-page .main__recipe-container,
+.edit-page .main__recipe-container-col__title-container {
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1440px) {
+  .edit-page .main__recipe-container {
+    flex-wrap: wrap;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    gap: 0;
+  }
+  .edit-page .main__recipe-container-col {
+    width: calc(50% - 0.5rem);
+  }
+  .edit-page .main__recipe-container-col:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+  .edit-page .main__recipe-container-col:last-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 3rem;
+    border-top: 0.5rem solid #2c3e50;
+  }
+  .edit-page
+    .main__recipe-container-col:last-of-type
+    .main__recipe-detail-container {
+    width: calc(50% - 0.5rem);
+  }
+}
+.edit-page .main__delete-button {
+  background: #e74c3c;
+  color: #fff;
+  padding: 2.4rem;
+}
+.edit-page .main__delete-button:hover {
+  background: #fff;
+  color: #e74c3c;
+}
+.edit-page .main__column-title-container {
+  width: 100%;
+}
+.edit-page .main__instructions-title,
+.edit-page .main__ingredients-title {
+  font-size: clamp(1rem, 6vw, 3.5rem);
+  margin-right: 3.5rem;
+}
+@media only screen and (max-width: 1440px) {
+  .edit-page .main__instructions-title,
+  .edit-page .main__ingredients-title {
+    font-size: clamp(1rem, 2vw + 1rem, 3.5rem);
+    margin-right: clamp(1rem, 2vw + 1rem, 3.5rem);
+  }
+}
+.edit-page .main__add-new-button,
+.edit-page .main__step-remove-button,
+.edit-page .main__ingredient-remove-button {
+  font-size: 1.4rem;
+  padding: 1.4rem;
+}
+.edit-page .main__add-new-button {
+  color: #fff;
+  background: #2c3e50;
+}
+.edit-page .main__add-new-button:hover {
+  color: #2c3e50;
+  background: #fff;
+}
+@media only screen and (max-width: 1440px) {
+  .edit-page .main__add-new-button {
+    font-size: clamp(1rem, 1vw + 0.25rem, 1.4rem);
+  }
+}
+.edit-page .main__step-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+.edit-page .main__step-title-container {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.edit-page .main__step-title-number {
+  margin-left: 0.6rem;
+}
+.edit-page .main__step-text-content {
+  display: inline-block;
+  font-size: 1.6rem;
+}
+.edit-page .main__step-remove-button {
+  margin-top: 2rem;
+}
+.edit-page .main__ingredient-container {
+  width: 100%;
+}
+.edit-page .main__ingredient-container.display-mode .main__ingredient-type {
+  max-width: 22ch;
+  padding: 1rem;
+}
+.edit-page .main__ingredient-container.edit-mode .main__ingredient-type {
+  max-width: 13ch;
+  margin-right: 3rem;
+}
+@media only screen and (max-width: 1100px) {
+  .edit-page .main__ingredient-container.display-mode .main__ingredient-type {
+    max-width: 20ch;
+  }
+  .edit-page .main__ingredient-container.edit-mode .main__ingredient-wrapper {
+    flex-direction: column;
+  }
+  .edit-page .main__ingredient-container.edit-mode .main__ingredient-type {
+    max-width: none;
+    margin: 0 0 3rem;
+  }
+  .edit-page
+    .main__ingredient-container.edit-mode
+    .main__ingredient-button-container {
+    justify-content: space-between;
+  }
+  .edit-page .main__ingredient-container.edit-mode .main__ingredient-type,
+  .edit-page
+    .main__ingredient-container.edit-mode
+    .main__ingredient-button-container {
+    width: 100%;
+  }
+}
+.edit-page .main__ingredient-wrapper {
+  justify-content: space-between;
+}
+.edit-page .main__ingredient-type {
+  display: inline-block;
+  font-weight: 700;
+}
+.edit-page .main__ingredient-remove-button {
+  justify-content: center;
+  margin-right: 2.4rem;
+}
+.edit-page .main__step-container,
+.edit-page .main__ingredient-container,
+.edit-page .main__recipe-detail-container {
+  min-height: 16rem;
   color: #fff;
   background: #2c3e50;
   width: 100%;
@@ -896,22 +1284,372 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   padding: 3rem 0;
   font-size: 2.4rem;
 }
-
-.edit-page .main__step-remove-button, .edit-page .main__ingredient-remove-button, .edit-page .main__recipe-detail-remove-button {
+.edit-page .main__step-container.display-mode:hover,
+.edit-page .main__ingredient-container.display-mode:hover,
+.edit-page .main__recipe-detail-container.display-mode:hover {
+  color: #2c3e50;
+  background: #fff;
+}
+.edit-page .main__step-container.display-mode:hover .main__step-edit-icon,
+.edit-page .main__step-container.display-mode:hover .main__ingredient-edit-icon,
+.edit-page
+  .main__step-container.display-mode:hover
+  .main__recipe-detail-edit-icon,
+.edit-page .main__ingredient-container.display-mode:hover .main__step-edit-icon,
+.edit-page
+  .main__ingredient-container.display-mode:hover
+  .main__ingredient-edit-icon,
+.edit-page
+  .main__ingredient-container.display-mode:hover
+  .main__recipe-detail-edit-icon,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__step-edit-icon,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__ingredient-edit-icon,
+.edit-page
+  .main__recipe-detail-container.display-mode:hover
+  .main__recipe-detail-edit-icon {
+  opacity: 1;
+}
+.edit-page .main__step-container.display-mode .main__step-edit-icon,
+.edit-page .main__step-container.display-mode .main__ingredient-edit-icon,
+.edit-page .main__step-container.display-mode .main__recipe-detail-edit-icon,
+.edit-page .main__ingredient-container.display-mode .main__step-edit-icon,
+.edit-page .main__ingredient-container.display-mode .main__ingredient-edit-icon,
+.edit-page
+  .main__ingredient-container.display-mode
+  .main__recipe-detail-edit-icon,
+.edit-page .main__recipe-detail-container.display-mode .main__step-edit-icon,
+.edit-page
+  .main__recipe-detail-container.display-mode
+  .main__ingredient-edit-icon,
+.edit-page
+  .main__recipe-detail-container.display-mode
+  .main__recipe-detail-edit-icon {
+  opacity: 0;
+}
+.edit-page .main__step-container.display-mode .main__step-remove-button,
+.edit-page .main__step-container.display-mode .main__ingredient-remove-button,
+.edit-page
+  .main__step-container.display-mode
+  .main__recipe-detail-remove-button,
+.edit-page .main__ingredient-container.display-mode .main__step-remove-button,
+.edit-page
+  .main__ingredient-container.display-mode
+  .main__ingredient-remove-button,
+.edit-page
+  .main__ingredient-container.display-mode
+  .main__recipe-detail-remove-button,
+.edit-page
+  .main__recipe-detail-container.display-mode
+  .main__step-remove-button,
+.edit-page
+  .main__recipe-detail-container.display-mode
+  .main__ingredient-remove-button,
+.edit-page
+  .main__recipe-detail-container.display-mode
+  .main__recipe-detail-remove-button {
+  display: none;
+  width: 0;
+  height: 0;
+  padding: 0;
+}
+.edit-page .main__step-container.edit-mode .main__step-text-content,
+.edit-page .main__step-container.edit-mode .main__ingredient-text-content,
+.edit-page .main__ingredient-container.edit-mode .main__step-text-content,
+.edit-page .main__ingredient-container.edit-mode .main__ingredient-text-content,
+.edit-page .main__recipe-detail-container.edit-mode .main__step-text-content,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__ingredient-text-content {
+  color: #2c3e50;
+  background: #fff;
+  padding: 1.4rem;
+}
+.edit-page .main__step-container.edit-mode .main__step-edit-icon,
+.edit-page .main__step-container.edit-mode .main__ingredient-edit-icon,
+.edit-page .main__step-container.edit-mode .main__recipe-detail-edit-icon,
+.edit-page .main__ingredient-container.edit-mode .main__step-edit-icon,
+.edit-page .main__ingredient-container.edit-mode .main__ingredient-edit-icon,
+.edit-page .main__ingredient-container.edit-mode .main__recipe-detail-edit-icon,
+.edit-page .main__recipe-detail-container.edit-mode .main__step-edit-icon,
+.edit-page .main__recipe-detail-container.edit-mode .main__ingredient-edit-icon,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-edit-icon {
+  opacity: 1;
+  color: #f1c40f;
+}
+.edit-page .main__step-container.edit-mode .main__step-edit-icon:hover,
+.edit-page .main__step-container.edit-mode .main__ingredient-edit-icon:hover,
+.edit-page .main__step-container.edit-mode .main__recipe-detail-edit-icon:hover,
+.edit-page .main__ingredient-container.edit-mode .main__step-edit-icon:hover,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__ingredient-edit-icon:hover,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__recipe-detail-edit-icon:hover,
+.edit-page .main__recipe-detail-container.edit-mode .main__step-edit-icon:hover,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__ingredient-edit-icon:hover,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-edit-icon:hover {
+  color: #fff;
+}
+.edit-page .main__step-container.edit-mode .main__step-type,
+.edit-page .main__step-container.edit-mode .main__step-cuisine-type,
+.edit-page .main__step-container.edit-mode .main__step-serving-size-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__step-cooking-time-hours-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__step-cooking-time-minutes-number,
+.edit-page .main__step-container.edit-mode .main__ingredient-type,
+.edit-page .main__step-container.edit-mode .main__ingredient-cuisine-type,
+.edit-page
+  .main__step-container.edit-mode
+  .main__ingredient-serving-size-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__ingredient-cooking-time-hours-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__ingredient-cooking-time-minutes-number,
+.edit-page .main__step-container.edit-mode .main__recipe-detail-type,
+.edit-page .main__step-container.edit-mode .main__recipe-detail-cuisine-type,
+.edit-page
+  .main__step-container.edit-mode
+  .main__recipe-detail-serving-size-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__recipe-detail-cooking-time-hours-number,
+.edit-page
+  .main__step-container.edit-mode
+  .main__recipe-detail-cooking-time-minutes-number,
+.edit-page .main__ingredient-container.edit-mode .main__step-type,
+.edit-page .main__ingredient-container.edit-mode .main__step-cuisine-type,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__step-serving-size-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__step-cooking-time-hours-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__step-cooking-time-minutes-number,
+.edit-page .main__ingredient-container.edit-mode .main__ingredient-type,
+.edit-page .main__ingredient-container.edit-mode .main__ingredient-cuisine-type,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__ingredient-serving-size-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__ingredient-cooking-time-hours-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__ingredient-cooking-time-minutes-number,
+.edit-page .main__ingredient-container.edit-mode .main__recipe-detail-type,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__recipe-detail-cuisine-type,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__recipe-detail-serving-size-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__recipe-detail-cooking-time-hours-number,
+.edit-page
+  .main__ingredient-container.edit-mode
+  .main__recipe-detail-cooking-time-minutes-number,
+.edit-page .main__recipe-detail-container.edit-mode .main__step-type,
+.edit-page .main__recipe-detail-container.edit-mode .main__step-cuisine-type,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__step-serving-size-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__step-cooking-time-hours-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__step-cooking-time-minutes-number,
+.edit-page .main__recipe-detail-container.edit-mode .main__ingredient-type,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__ingredient-cuisine-type,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__ingredient-serving-size-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__ingredient-cooking-time-hours-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__ingredient-cooking-time-minutes-number,
+.edit-page .main__recipe-detail-container.edit-mode .main__recipe-detail-type,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cuisine-type,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-serving-size-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cooking-time-hours-number,
+.edit-page
+  .main__recipe-detail-container.edit-mode
+  .main__recipe-detail-cooking-time-minutes-number {
+  color: #2c3e50;
+  background: #fff;
+  padding: 1.4rem;
+}
+.edit-page .main__step-remove-button,
+.edit-page .main__ingredient-remove-button,
+.edit-page .main__recipe-detail-remove-button {
   background: #e74c3c;
   color: #fff;
 }
-
-.edit-page .main__step-remove-button:hover, .edit-page .main__ingredient-remove-button:hover, .edit-page .main__recipe-detail-remove-button:hover {
+.edit-page .main__step-remove-button:hover,
+.edit-page .main__ingredient-remove-button:hover,
+.edit-page .main__recipe-detail-remove-button:hover {
   background: #fff;
   color: #e74c3c;
 }
-
-.edit-page .main__step-edit-icon:hover, .edit-page .main__ingredient-edit-icon:hover, .edit-page .main__recipe-detail-edit-icon:hover {
+.edit-page .main__step-edit-icon:hover,
+.edit-page .main__ingredient-edit-icon:hover,
+.edit-page .main__recipe-detail-edit-icon:hover {
   color: #f1c40f;
 }
-
-.edit-page .main__step-edit-icon, .edit-page .main__ingredient-edit-icon, .edit-page .main__recipe-title-edit-icon {
+.edit-page .main__step-edit-icon,
+.edit-page .main__ingredient-edit-icon,
+.edit-page .main__recipe-title-edit-icon {
   font-size: 2.4rem;
 }
+@media only screen and (max-width: 768px) {
+  .edit-page .main__recipe-title-input {
+    max-width: 11ch;
+  }
+  .edit-page .main__recipe-container-col {
+    width: 100%;
+  }
+  .edit-page .main__recipe-container-col:last-of-type {
+    flex-direction: column;
+  }
+  .edit-page
+    .main__recipe-container-col:last-of-type
+    .main__recipe-detail-container {
+    width: 100%;
+  }
+  .edit-page .main__recipe-container-col__title-container {
+    width: 100%;
+  }
+  .edit-page .main__title-button-container {
+    margin-bottom: 4rem;
+  }
+  .edit-page .main__instructions-title,
+  .edit-page .main__ingredients-title {
+    font-size: clamp(1rem, 2vw + 1rem, 3.5rem);
+  }
+  .edit-page .main__add-new-button {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+  .edit-page .main__step-title,
+  .edit-page .main__step-edit-icon,
+  .edit-page .main__recipe-title-edit-icon,
+  .edit-page .main__ingredient-type,
+  .edit-page .main__recipe-detail-cuisine-title,
+  .edit-page .main__recipe-detail-serving-size-title,
+  .edit-page .main__recipe-detail-cooking-time-title,
+  .edit-page .main__recipe-detail-last-updated-title {
+    font-size: clamp(1rem, 2vw + 1rem, 3.5rem);
+  }
+  .edit-page .main__step-text-content,
+  .edit-page .main__recipe-detail-cuisine-type,
+  .edit-page .main__recipe-detail-serving-size-number,
+  .edit-page .main__recipe-detail-serving-size-label,
+  .edit-page .main__recipe-detail-cooking-time-hours-number,
+  .edit-page .main__recipe-detail-cooking-time-hours-label,
+  .edit-page .main__recipe-detail-cooking-time-minutes-number,
+  .edit-page .main__recipe-detail-cooking-time-minutes-label,
+  .edit-page .main__recipe-detail-last-updated-number,
+  .edit-page .main__recipe-detail-last-updated-label {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .edit-page .main {
+    padding-bottom: 16rem;
+  }
+  .edit-page .main__title-button-container {
+    margin: 0;
+  }
+  .edit-page .main__title-button-container:hover .main__recipe-title-input {
+    transition: 0.5s;
+    transform: translateX(-6%);
+  }
+  .edit-page .main__recipe-title-container {
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+    position: relative;
+  }
+  .edit-page .main__recipe-title-container.display-mode {
+    padding: 1.4rem;
+  }
+  .edit-page .main__recipe-title-container.display-mode:hover {
+    padding: 1.4rem;
+  }
+  .edit-page .main__recipe-title-container.edit-mode .main__recipe-title-input {
+    transition: 0.5s;
+    transform: translateX(-6%);
+    max-width: 15ch;
+    text-align: left;
+  }
+  .edit-page .main__recipe-title-edit-icon {
+    position: absolute;
+    right: 2rem;
+  }
+  .edit-page .main__recipe-title-input {
+    font-size: clamp(1rem, 6vw, 5rem);
+    max-width: 13ch;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .edit-page .main__recipe-container-col:last-of-type {
+    flex-direction: column;
+  }
+  .edit-page
+    .main__recipe-container-col:last-of-type
+    .main__recipe-detail-container {
+    width: 100%;
+  }
+  .edit-page .main__delete-button {
+    position: absolute;
+    bottom: 5rem;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .edit-page .main__recipe-title-container.edit-mode .main__recipe-title-input {
+    max-width: 12ch;
+  }
+  .edit-page
+    .main__recipe-detail-container.display-mode
+    .main__recipe-detail-cooking-time-hours-container {
+    margin: 0;
+  }
+  .edit-page .main__recipe-detail-cooking-time-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .edit-page .main__recipe-detail-cooking-time-hours-container {
+    margin: 0 0 1rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

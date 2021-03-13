@@ -1,0 +1,734 @@
+//Edit page styles
+.edit-page {
+  & .header {
+    &__home-icon {
+      &:hover {
+        @extend %hover-brightness;
+      }
+    }
+  }
+
+  & .main {
+    &__title-button-container {
+      margin-bottom: 8rem;
+    }
+
+    &__recipe {
+      &-title {
+        &-container {
+          @extend %flexbox-row, %border-radius, %transition;
+          color: $primary-clr;
+          justify-content: space-between;
+          margin: 0;
+
+          * {
+            @extend %transition;
+          }
+
+          &.display-mode {
+            padding: 1.4rem 1.4rem 1.4rem 0;
+
+            &:hover {
+              @extend %hover-styles;
+              background: #fff;
+              padding: 1.4rem 1.75rem;
+
+              & .main__recipe-title-edit-icon {
+                opacity: 1;
+              }
+            }
+          }
+
+          &.edit-mode {
+            background: #fff;
+            padding: 1.4rem 1.75rem;
+
+            & .main__recipe-title-edit-icon {
+              @extend %transition;
+              color: $primary-highlight-clr;
+              opacity: 1;
+
+              &:hover {
+                color: $primary-clr;
+              }
+            }
+
+            & .main__recipe-title-input {
+              @extend %transition;
+              padding: 1.4rem 1.6rem;
+              background: $input-edit-clr;
+              border: 0.2rem $primary-highlight-clr solid;
+              outline-color: invert;
+            }
+          }
+        }
+
+        &-input {
+          @extend %border-radius;
+          font-size: $font-size-x-large;
+          font-weight: $font-bold;
+          max-width: 25ch;
+          margin-right: 2.4rem;
+        }
+
+        &-edit-icon {
+          opacity: 0;
+
+          &:hover {
+            color: $primary-highlight-clr;
+          }
+        }
+
+        &-input,
+        &-edit-icon {
+          @extend %transition;
+        }
+
+        @media only screen and (max-width: 1440px) {
+          &-input {
+            font-size: $font-size-x-large-tablet;
+          }
+
+          &-container {
+            margin-right: 5rem;
+          }
+        }
+      }
+
+      &-detail {
+        &-wrapper {
+          @extend %flexbox-row;
+          justify-content: space-between;
+        }
+
+        &-container {
+          height: 16rem;
+
+          &.display-mode {
+            &:hover {
+              & .main__recipe-detail {
+                &-cuisine-type,
+                &-serving-size-number,
+                &-cooking-time-hours-number,
+                &-cooking-time-minutes-number {
+                  @extend %hover-styles;
+                  color: $primary-clr;
+                  background: none;
+                }
+              }
+            }
+          }
+
+          &.edit-mode {
+            & .main__recipe-detail {
+              &-serving-size-number {
+                width: 10ch;
+              }
+
+              &-serving-size,
+              &-cooking-time-hours,
+              &-cooking-time-minutes {
+                &-number {
+                  &::-webkit-inner-spin-button {
+                    -webkit-appearance: auto;
+                  }
+
+                  &::-webkit-outer-spin-button {
+                    -webkit-appearance: auto;
+                  }
+                }
+              }
+
+              &-cooking-time-hours,
+              &-cooking-time-minutes {
+                &-number {
+                  width: 7ch;
+                  margin-right: 1rem;
+                }
+              }
+            }
+          }
+        }
+
+        &-text-content {
+          @extend %flexbox-column-center;
+          align-items: flex-start;
+        }
+
+        &-edit-icon {
+          @extend %transition;
+          opacity: 0;
+        }
+
+        &-cuisine {
+          &-type {
+            font-size: $font-size-small-plus;
+            max-width: 30ch;
+          }
+
+          &-title,
+          &-type {
+            display: block;
+          }
+        }
+
+        &-serving-size {
+          &-label {
+            font-size: $font-size-small-plus;
+          }
+
+          &-number {
+            width: 5ch;
+          }
+        }
+
+        &-cooking-time {
+          &-container {
+            @extend %flexbox-row;
+          }
+
+          &-hours-container {
+            margin-right: 2rem;
+          }
+
+          &-hours,
+          &-minutes {
+            &-container {
+              @extend %flexbox-row;
+            }
+
+            &-number {
+              width: 3ch;
+            }
+          }
+        }
+
+        &-last-updated-number {
+          margin: 0;
+        }
+
+        &-container,
+        &-cuisine-title {
+          width: 100%;
+        }
+
+        &-cuisine,
+        &-serving-size,
+        &-cooking-time,
+        &-last-updated {
+          &-title {
+            font-weight: $font-bold;
+            font-size: $font-size-medium-plus;
+            margin-bottom: 1rem;
+          }
+        }
+
+        &-serving-size,
+        &-cooking-time-hours,
+        &-cooking-time-minutes,
+        &-last-updated {
+          &-number {
+            background: none;
+            color: #fff;
+            border: none;
+            outline-width: 0;
+          }
+
+          &-number,
+          &-label {
+            font-size: $font-size-small-plus;
+          }
+        }
+      }
+
+      &-container {
+        @extend %flexbox-row;
+
+        &-col {
+          @extend %flexbox-column-center;
+          width: calc(100% / 3);
+
+          &.main__recipe-attributes-col {
+            margin-top: 10rem;
+          }
+
+          &__title-container {
+            @extend %flexbox-row;
+            height: 10rem;
+            color: $primary-clr;
+          }
+
+          &__content-container {
+            width: 100%;
+          }
+        }
+
+        &,
+        &-col {
+          align-items: flex-start;
+        }
+
+        &,
+        &-col__title-container {
+          justify-content: space-between;
+        }
+
+        @media only screen and (max-width: 1440px) {
+          flex-wrap: wrap;
+          grid-template-columns: none;
+          grid-template-rows: none;
+          gap: 0;
+
+          &-col {
+            width: calc(50% - 0.5rem);
+
+            &:not(:last-of-type) {
+              margin-bottom: 2rem;
+            }
+
+            &:last-of-type {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              width: 100%;
+              margin-top: 0;
+              padding-top: 3rem;
+              border-top: 0.5rem solid $primary-clr;
+
+              & .main__recipe-detail-container {
+                width: calc(50% - 0.5rem);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__delete-button {
+      @include remove-colors($remove-color: true);
+      padding: 2.4rem;
+
+      &:hover {
+        @include remove-colors($remove-color: false);
+      }
+    }
+
+    &__column-title-container {
+      @extend %flexbox-row;
+      width: 100%;
+    }
+
+    &__instructions-title,
+    &__ingredients-title {
+      font-size: $font-size-large-desktop;
+      margin-right: 3.5rem;
+
+      @media only screen and (max-width: 1440px) {
+        font-size: $font-size-large-tablet;
+        margin-right: $font-size-large-tablet;
+      }
+    }
+
+    &__add-new,
+    &__step-remove,
+    &__ingredient-remove {
+      &-button {
+        font-size: $font-size-small;
+        padding: 1.4rem;
+      }
+    }
+
+    &__add-new-button {
+      @include primary-theme-colors($light-theme: false);
+
+      &:hover {
+        @include primary-theme-colors($light-theme: true);
+      }
+
+      @media only screen and (max-width: 1440px) {
+        font-size: $font-size-small-laptop;
+      }
+    }
+
+    &__step {
+      @extend %transition;
+
+      &-title {
+        margin: 0;
+        font-weight: $font-bold;
+        font-size: $font-size-medium-plus;
+
+        &-container {
+          @extend %flexbox-row;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 1rem;
+        }
+
+        &-number {
+          margin-left: 0.6rem;
+        }
+      }
+
+      &-text-content {
+        display: inline-block;
+        font-size: $font-size-small-plus;
+      }
+
+      &-remove-button {
+        margin-top: 2rem;
+      }
+    }
+
+    &__ingredient {
+      &-container {
+        width: 100%;
+
+        &.display-mode {
+          & .main__ingredient {
+            &-type {
+              max-width: 22ch;
+              padding: 1rem;
+            }
+          }
+        }
+
+        &.edit-mode {
+          & .main__ingredient {
+            &-type {
+              max-width: 13ch;
+              margin-right: 3rem;
+            }
+          }
+        }
+
+        @media only screen and (max-width: 1100px) {
+          &.display-mode {
+            & .main__ingredient {
+              &-type {
+                max-width: 20ch;
+              }
+            }
+          }
+
+          &.edit-mode {
+            & .main__ingredient {
+              &-wrapper {
+                flex-direction: column;
+              }
+
+              &-type {
+                max-width: none;
+                margin: 0 0 3rem;
+              }
+
+              &-button-container {
+                justify-content: space-between;
+              }
+
+              &-type,
+              &-button-container {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      &-wrapper {
+        justify-content: space-between;
+      }
+
+      &-type {
+        display: inline-block;
+        font-weight: $font-bold;
+      }
+
+      &-remove-button {
+        @extend %flexbox-row;
+        justify-content: center;
+        margin-right: 2.4rem;
+      }
+
+      &-wrapper,
+      &-button-container {
+        @extend %flexbox-row;
+      }
+    }
+
+    &__step,
+    &__ingredient,
+    &__recipe-detail {
+      &-container {
+        min-height: 16rem;
+        @extend %border-radius, %flexbox-column-center;
+        @include primary-theme-colors($light-theme: false);
+        width: 100%;
+        margin: 0 0 1.2rem;
+        padding: 3rem 0;
+        font-size: $font-size-medium-plus;
+
+        &.display-mode {
+          &:hover {
+            @extend %hover-styles;
+            @include primary-theme-colors($light-theme: true);
+
+            & .main__step-edit-icon,
+            & .main__ingredient-edit-icon,
+            & .main__recipe-detail-edit-icon {
+              opacity: 1;
+            }
+          }
+
+          & .main__step,
+          & .main__ingredient,
+          & .main__recipe-detail {
+            &-edit-icon {
+              opacity: 0;
+            }
+
+            &-remove-button {
+              display: none;
+              width: 0;
+              height: 0;
+              padding: 0;
+            }
+          }
+        }
+
+        &.edit-mode {
+          & .main__step,
+          & .main__ingredient {
+            &-text-content {
+              @extend %border-radius;
+              @include primary-theme-colors($light-theme: true);
+              padding: 1.4rem;
+            }
+          }
+
+          & .main__step,
+          & .main__ingredient,
+          & .main__recipe-detail {
+            &-edit-icon {
+              opacity: 1;
+              color: $secondary-clr;
+
+              &:hover {
+                color: #fff;
+              }
+            }
+
+            &-type,
+            &-cuisine-type,
+            &-serving-size-number,
+            &-cooking-time-hours-number,
+            &-cooking-time-minutes-number {
+              @extend %border-radius;
+              @include primary-theme-colors($light-theme: true);
+              padding: 1.4rem;
+            }
+          }
+        }
+
+        &.display-mode,
+        &.edit-mode {
+          @extend %transition;
+        }
+      }
+
+      &-remove-button {
+        @include remove-colors($remove-color: true);
+
+        &:hover {
+          @include remove-colors($remove-color: false);
+        }
+      }
+
+      &-edit-icon {
+        &:hover {
+          @extend %hover-styles;
+          color: $secondary-clr;
+        }
+      }
+    }
+
+    &__step,
+    &__ingredient,
+    &__recipe-title {
+      &-edit-icon {
+        @extend %transition;
+        font-size: $font-size-medium-plus;
+
+        &:hover {
+          @extend %hover-styles;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      &__recipe-title-input {
+        max-width: 11ch;
+      }
+
+      &__recipe-container-col {
+        width: 100%;
+
+        &:last-of-type {
+          flex-direction: column;
+
+          & .main__recipe-detail-container {
+            width: 100%;
+          }
+        }
+
+        &__title-container {
+          width: 100%;
+        }
+      }
+
+      &__title-button-container {
+        margin-bottom: 4rem;
+      }
+
+      &__instructions-title,
+      &__ingredients-title {
+        font-size: $font-size-large-tablet;
+      }
+
+      &__add-new-button {
+        font-size: $font-size-small-mobile;
+      }
+
+      &__step-title,
+      &__step-edit-icon,
+      &__recipe-title-edit-icon,
+      &__ingredient-type,
+      &__recipe-detail-cuisine-title,
+      &__recipe-detail-serving-size-title,
+      &__recipe-detail-cooking-time-title,
+      &__recipe-detail-last-updated-title {
+        font-size: $font-size-large-tablet;
+      }
+
+      &__step-text-content,
+      &__recipe-detail-cuisine-type,
+      &__recipe-detail-serving-size-number,
+      &__recipe-detail-serving-size-label,
+      &__recipe-detail-cooking-time-hours-number,
+      &__recipe-detail-cooking-time-hours-label,
+      &__recipe-detail-cooking-time-minutes-number,
+      &__recipe-detail-cooking-time-minutes-label,
+      &__recipe-detail-last-updated-number,
+      &__recipe-detail-last-updated-label {
+        font-size: $font-size-small-mobile;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      padding-bottom: 16rem;
+
+      &__title-button-container {
+        margin: 0;
+
+        &:hover {
+          & .main__recipe-title-input {
+            transition: 0.5s;
+            transform: translateX(-6%);
+          }
+        }
+      }
+
+      &__recipe {
+        &-title {
+          &-container {
+            justify-content: flex-end;
+            width: 100%;
+            margin: 0;
+            position: relative;
+
+            &.display-mode {
+              padding: 1.4rem;
+
+              &:hover {
+                padding: 1.4rem;
+              }
+            }
+
+            &.edit-mode {
+              & .main__recipe-title-input {
+                transition: 0.5s;
+                transform: translateX(-6%);
+                max-width: 15ch;
+                text-align: left;
+              }
+            }
+          }
+
+          &-edit-icon {
+            position: absolute;
+            right: 2rem;
+          }
+
+          &-input {
+            font-size: $font-size-x-large-tablet;
+            max-width: 13ch;
+            margin: 0 auto;
+            text-align: center;
+          }
+        }
+
+        &-container-col {
+          &:last-of-type {
+            flex-direction: column;
+
+            & .main__recipe-detail-container {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      &__delete-button {
+        position: absolute;
+        bottom: 5rem;
+      }
+    }
+
+    @media only screen and (max-width: 420px) {
+      &__recipe {
+        &-title {
+          &-container {
+            &.edit-mode {
+              & .main__recipe-title-input {
+                max-width: 12ch;
+              }
+            }
+          }
+        }
+        &-detail {
+          &-container {
+            &.display-mode {
+              & .main__recipe-detail-cooking-time-hours-container {
+                margin: 0;
+              }
+            }
+          }
+
+          &-cooking-time {
+            &-container {
+              flex-direction: column;
+              align-items: flex-start;
+              margin: 0;
+            }
+
+            &-hours-container {
+              margin: 0 0 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

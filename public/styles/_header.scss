@@ -1,0 +1,60 @@
+// Header styles
+
+.header {
+  width: 100%;
+  padding: 8rem 0;
+  color: $primary-clr;
+
+  &__wrapper {
+    justify-content: space-between;
+  }
+
+  &__logo-container {
+    justify-content: flex-start;
+  }
+
+  &__utensils-icon {
+    margin-right: 2.4rem;
+  }
+
+  &__search-icon,
+  &__home-icon {
+    @extend %transition;
+    font-size: $font-size-large;
+    color: $primary-clr;
+
+    &:hover {
+      @extend %hover-styles;
+      color: $primary-highlight-clr;
+    }
+  }
+
+  &__wrapper,
+  &__logo-container,
+  &__search-icon {
+    @extend %flexbox-row;
+  }
+
+  &__utensils-icon,
+  &__logo-title {
+    font-size: $font-size-x-large;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 4rem 0;
+
+    &__search-icon,
+    &__home-icon {
+      font-size: $font-size-large-tablet;
+    }
+
+    &__utensils-icon {
+      margin-right: $font-size-medium-tablet;
+    }
+
+    &__utensils-icon,
+    &__logo-title {
+      font-size: $font-size-large-tablet;
+    }
+  }
+}
